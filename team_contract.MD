@@ -16,8 +16,7 @@ As long as the deliverables for the week are covered by each team member, the am
 
 3. **Conflict Resolution:** To resolve disagreements, we will sit down with the other members not involved and pitch our ideas to them, as well as reservations we had about the other one’s ideas. Once we have both ideas pitched, we will go through positive and negative ideas in both and then create a holistic solution. If people have not completed tasks, they will be repeatedly reminded on social media, as well as email. If someone is late, we will wait for 5 minutes after the start of the meeting for them to come, otherwise we will continue the meeting and phone them in and fill them in on any updates. 
 
-###### Sincerely signed: 
-###### *Faraz Siddiqi*
+###### Sincerely signed:
 ###### *Shalin Mehta*
 ###### *Sunskar Dhanker*
 
