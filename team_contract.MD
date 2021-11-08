@@ -20,5 +20,6 @@ As long as the deliverables for the week are covered by each team member, the am
 ###### *Faraz Siddiqi*
 ###### *Shalin Mehta*
 ###### *Sunskar Dhanker*
+###### *Acchindra Thev*
 
 
