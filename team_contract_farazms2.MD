@@ -1,4 +1,4 @@
-####**Team Contract          snmehta2-athev2-dhanker2-farazms2**
+####**Team Contract####         snmehta2-athev2-dhanker2-farazms2**
 
 ##Communication 
 1. **Team Meetings:** Our team will meet Monday, Wednesday, Friday, and Sunday in the mornings from 11am-1pm. We will meet in person at 707 S 4th Street. There will not be a designated note taker since we will be meeting often enough where progress can be monitored by seeing progress in code. Should there be a time where people cannot meet, we will have Meeting Minutes to catch the other person up. 
