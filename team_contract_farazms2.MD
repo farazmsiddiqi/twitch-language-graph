@@ -1,6 +1,6 @@
-####**Team Contract####         snmehta2-athev2-dhanker2-farazms2**
+#### **Team Contract         snmehta2-athev2-dhanker2-farazms2**
 
-##Communication 
+## Communication 
 1. **Team Meetings:** Our team will meet Monday, Wednesday, Friday, and Sunday in the mornings from 11am-1pm. We will meet in person at 707 S 4th Street. There will not be a designated note taker since we will be meeting often enough where progress can be monitored by seeing progress in code. Should there be a time where people cannot meet, we will have Meeting Minutes to catch the other person up. 
 
 2. **Assistance:** Each team member will need to check their @illinois.edu email address, as well as messaging from phone numbers on a daily basis as updates will be coming frequently. We will be calling using phone numbers, which we have already exchanged, and email larger updates via email.
@@ -16,7 +16,7 @@ As long as the deliverables for the week are covered by each team member, the am
 
 3. **Conflict Resolution:** To resolve disagreements, we will sit down with the other members not involved and pitch our ideas to them, as well as reservations we had about the other one’s ideas. Once we have both ideas pitched, we will go through positive and negative ideas in both and then create a holistic solution. If people have not completed tasks, they will be repeatedly reminded on social media, as well as email. If someone is late, we will wait for 5 minutes after the start of the meeting for them to come, otherwise we will continue the meeting and phone them in and fill them in on any updates. 
 
-######Sincerely signed: *Faraz Siddiqi*
+###### Sincerely signed: *Faraz Siddiqi*
 
 
 
