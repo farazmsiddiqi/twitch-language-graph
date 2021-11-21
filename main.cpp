@@ -1,5 +1,6 @@
 #include <iostream>
 #include "src/node.cpp"
+#include "src/csv_reader.cpp"
 
 
 int main() {
