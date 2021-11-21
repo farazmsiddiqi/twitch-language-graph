@@ -1,5 +1,5 @@
-.objs/main.o: main.cpp src/node.cpp src/node.h
-
-src/node.cpp:
+.objs/main.o: main.cpp src/node.h src/csv_reader.h
 
 src/node.h:
+
+src/csv_reader.h:

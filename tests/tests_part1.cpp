@@ -9,7 +9,10 @@
 #include "../cs225/HSLAPixel.h"
 
 // why is #include "../src/node.h" throwing a linker command????
-#include "../src/node.cpp"
+// #include "../src/node.cpp"
+
+//SOLUTION: GENERATE THE .o FILE BY HAND: https://www.linuxtopia.org/online_books/an_introduction_to_gcc/gccintro_13.html
+#include "../src/node.h"
 
 using namespace cs225;
 

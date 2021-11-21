@@ -48,6 +48,7 @@ $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)/cs225/catch
 	@mkdir -p $(OBJS_DIR)/cs225/lodepng
 	@mkdir -p $(OBJS_DIR)/tests
+	@mkdir -p $(OBJS_DIR)/src
 
 # Rules for compiling source code.
 # - Every object file is required by $(EXE)
@@ -74,6 +75,7 @@ $(TEST): output_msg $(patsubst %.o, $(OBJS_DIR)/%.o, $(OBJS_TEST))
 -include $(OBJS_DIR)/cs225/catch/*.d
 -include $(OBJS_DIR)/cs225/lodepng/*.d
 -include $(OBJS_DIR)/tests/*.d
+-include $(OBJS_DIR)/src/*.d
 
 # Custom Clang version enforcement Makefile rule:
 ccred=$(shell echo -e "\033[0;31m")
