@@ -7,7 +7,5 @@ int main() {
 
   Node test_node;
 
-  test_node.makefile_test_func();
-
   return 0;
 }

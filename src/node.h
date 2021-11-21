@@ -5,7 +5,19 @@
 
 using std::string;
 
+/**
+ * This class will be used to hold a Node's data. 
+ * DO NOT use this class to hold a vector of nodes. 
+ * We will initialize a vector of nodes in another place.
+ * 
+ * Please remember and use **ALL** CS 126 codestyling.
+ * 
+ * Please remember to adhere to DRY coding, encapsulation,
+ * variable naming, class design, object design, etc.
+ * 
+ **/
 class Node {
+
     public:
 
         bool makefile_test_func();
