@@ -26,7 +26,7 @@ TEST_CASE("Twitch::Makefile makefile works", "[weight=1][part=1][valgrind]") {
 
 TEST_CASE("Twitch::Makefile node class compiles", "[weight=1][part=1][valgrind]") {
 
-    Node test_node;
+    Node test_node = Node(0,0, "EN");
 
     REQUIRE( test_node.makefile_test_func() == true );
 }

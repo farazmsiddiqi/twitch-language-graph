@@ -5,10 +5,13 @@
 #include <utility>
 #include <fstream>
 #include <iostream>
+#include <sstream>
+#include <map>
 
 using std::string;
 using std::vector;
 using std::pair;
+using std::map;
 
 /**
  * This class will be used to hold a Graph's data.
@@ -27,7 +30,10 @@ class Graph {
        
     private:
         // pair(destination node, weight)
-        vector< vector< pair<Node, double> > > adj_list;
+        //map< Node, vector<pair<Node, double> > > adj_list;
+
+        vector< vector< pair< Node, double > > > adj_list;
+
 };
 
 

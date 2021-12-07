@@ -11,7 +11,7 @@
 
 int main() {
   std::cout << "THIS MESSAGE IS BEING PRINTED BY main.cpp" << std::endl;
-  Node test_node;
+  Node test_node = Node(0,0,"EN");
 
   Graph("data/large_twitch_features.csv", "data/large_twitch_edges.csv");
 
