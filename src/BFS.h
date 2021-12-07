@@ -3,12 +3,12 @@
 #include <map>
 #include <list>
 
-#include "twitch_graphs.h"
+#include "graph.h"
 
 class BFS {
 
     int vertices;
-    list<int> * adjacencyList;
+    std::list<int> * adjacencyList;
 
     bool * hasVisited;
 
@@ -16,8 +16,6 @@ class BFS {
         BFS(int numVert);
 
         void addEdge(int start, int end);
-
-        void BFS (int startValue);
 
     
 

@@ -59,6 +59,20 @@ class Node {
             return affiliate;
         }
 
+        // setters
+
+        void set_views(int num_views) {
+            views = num_views;
+        }
+
+        void set_numeric_id(int id) {
+            numeric_id = id;
+        }
+
+        void set_language(string lang) {
+            language = lang;
+        }
+
     private:
 
         /** 
