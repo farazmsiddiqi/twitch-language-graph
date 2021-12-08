@@ -2,7 +2,6 @@
 
 #include "node.h"
 #include <vector>
-#include <utility>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -29,6 +28,8 @@ class Graph {
             Node src;
             Node dest;
             double weight;
+
+            Edge() {}
             
             Edge(Node s, Node d, double w) {
                 src = s;
@@ -40,6 +41,8 @@ class Graph {
         bool makefile_test() {
             return true;
         }
+
+        void print_adj_list();
        
     private:
         // pair(destination node, weight)

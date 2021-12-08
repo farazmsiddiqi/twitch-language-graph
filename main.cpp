@@ -13,6 +13,8 @@ int main() {
   Graph g = Graph("data/test_features.csv", "data/test_edges.csv");
   std::cout << "THIS MESSAGE IS AFTER CALLING GRAPH CTOR" << std::endl;
 
+  g.print_adj_list();
+
 
   return 0;
 }
