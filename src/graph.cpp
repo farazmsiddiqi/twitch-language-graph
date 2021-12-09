@@ -120,3 +120,7 @@ void Graph::print_adj_list() {
 }
 
 // make a print edges fn
+
+bool Graph::hasNode(int nodeID) {
+    return data_map.find(nodeID) != data_map.end(); 
+}

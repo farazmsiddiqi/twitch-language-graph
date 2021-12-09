@@ -44,6 +44,7 @@ class Graph {
 
         void print_adj_list();
        
+        bool hasNode(int nodeID);
     private:
         unordered_map< int, Node > data_map;
         

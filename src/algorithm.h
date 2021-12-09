@@ -6,11 +6,10 @@
 
 class Algorithm {
   public:
-    Algorithm();
-    Algorithm(Graph g);
+    Algorithm(Graph& g);
 
     int BFS(Node start, Node target);
   private:
-    Graph graph_;
+    Graph& graph_;
 
 };
