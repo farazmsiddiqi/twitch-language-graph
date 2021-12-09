@@ -82,7 +82,9 @@ Graph::Graph(string features_file, string edges_file) {
         // for (int &i : node_ids) {
         //     std::cout << i << std::endl;
         // }
-        //std::cout << std::endl;
+        // std::cout << std::endl;
+
+        // TODO:  figure out a way to update the inner maps as opposed to replacing them.
 
         Node tmp_node_1 = data_map[node_ids[0]];
         Node tmp_node_2 = data_map[node_ids[1]];
@@ -95,7 +97,7 @@ Graph::Graph(string features_file, string edges_file) {
         
         Edge temp_edge2 = Edge(tmp_node_2, tmp_node_1, weight);
         unordered_map< int, Edge > tmp_map2;
-        tmp_map1[node_ids[0]] = temp_edge2;
+        tmp_map2[node_ids[0]] = temp_edge2;
         adj_list[node_ids[1]] = tmp_map2;
 
         // num_id_1 follows num_id_2 on twitch
