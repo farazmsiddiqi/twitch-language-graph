@@ -12,27 +12,47 @@ Graph::Graph(string features_file, string edges_file) {
         exit(-1);
     }
 
-    // to be placed in each node
-    int views, numeric_id;
-    string language;
+    // // for ease of iteration
+    // bool mature;
+    // int lifetime;
+    // string created_at;
+    // string updated_at;
+    // bool dead_acc;
+    // bool affiliate;
+    //fin_features >> views >> mature >> lifetime >> created_at >> updated_at >> numeric_id >> dead_acc >> language >> affiliate;
+    //std::cout << views << mature << lifetime << created_at << updated_at << numeric_id << dead_acc << language << affiliate << std::endl;
+    
+    string feature_line, feature;
 
-    // for ease of iteration
-    bool mature;
-    int lifetime;
-    string created_at;
-    string updated_at;
-    bool dead_acc;
-    bool affiliate;
+    // determined by looking at CSV
+    int feat_id_col = 5;
+    int feat_view_col = 0;
+    int feat_lang_col = 7;
 
     // O(n) time
     bool is_on_feature_headers = true;
-    while (fin_features >> views >> mature >> lifetime >> created_at >> updated_at >> numeric_id >> dead_acc >> language >> affiliate) {
+    while (getline(fin_features, feature_line)) {
         // prevents headers from getting read in
         if (is_on_feature_headers) {
             is_on_feature_headers = false;
             continue;
         }
-        // unordered_map< int, unordered_map< int, Edge> > adj_list;
+
+        std::stringstream s(feature_line);
+
+        vector<string> features;
+
+        while(getline(s, feature, ',')) {
+            features.push_back(feature);
+        }
+
+        // to be placed in each node
+        int numeric_id = std::stoi(features[feat_id_col]);
+        int views = std::stoi(features[feat_view_col]);
+        string language = features[feat_lang_col];
+
+        //std::cout << "Node: " << numeric_id << " " << views << " " << language << std::endl;
+
         data_map[numeric_id] = Node(numeric_id, views, language);
 
 
@@ -59,7 +79,10 @@ Graph::Graph(string features_file, string edges_file) {
             node_ids.push_back(std::stoi(id));
         }
 
-        //data_map[node_ids[0]] is a node
+        // for (int &i : node_ids) {
+        //     std::cout << i << std::endl;
+        // }
+        //std::cout << std::endl;
 
         Node tmp_node_1 = data_map[node_ids[0]];
         Node tmp_node_2 = data_map[node_ids[1]];
@@ -77,18 +100,21 @@ Graph::Graph(string features_file, string edges_file) {
 
         // num_id_1 follows num_id_2 on twitch
         
-
     }
 
 }
 
 void Graph::print_adj_list() {
     //map iterator
+    // unordered_map< int, unordered_map< int, Edge> > adj_list;
     unordered_map< int, unordered_map< int, Edge> >::iterator it;
     for (it = adj_list.begin(); it != adj_list.end(); ++it) {
         unordered_map< int, Edge> map = it->second;
+        std::cout << it->first << " ";
         for (auto it2 = map.begin(); it2 != map.end(); ++it2) {
             std::cout << it2->first << std::endl;
         }
     }
 }
+
+// make a print edges fn

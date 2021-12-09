@@ -45,11 +45,8 @@ class Graph {
         void print_adj_list();
        
     private:
-        // pair(destination node, weight)
         unordered_map< int, Node > data_map;
         
         unordered_map< int, unordered_map< int, Edge> > adj_list;
 
 };
-
-

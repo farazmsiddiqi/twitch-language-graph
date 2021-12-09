@@ -7,11 +7,11 @@
 
 
 int main() {
-  std::cout << "THIS MESSAGE IS BEING PRINTED BY the file main.cpp" << std::endl;
+  //std::cout << "THIS MESSAGE IS BEING PRINTED BY the file main.cpp" << std::endl;
   //Node test_node = Node(0,0,"EN");
 
   Graph g = Graph("data/test_features.csv", "data/test_edges.csv");
-  std::cout << "THIS MESSAGE IS AFTER CALLING GRAPH CTOR" << std::endl;
+  //std::cout << "THIS MESSAGE IS AFTER CALLING GRAPH CTOR" << std::endl;
 
   g.print_adj_list();
 
