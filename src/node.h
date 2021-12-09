@@ -20,7 +20,7 @@ class Node {
 
     public:
         Node() {
-            numeric_id = 0;
+            numeric_id = -1;
             views = 0;
             language = "";
         }
