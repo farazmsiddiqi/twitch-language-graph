@@ -1,14 +1,2 @@
-
-# Executable names:
-EXE = main
-TEST = test
-
-# Add all object files needed for compiling:
-EXE_OBJ = main.o
-OBJS = main.o node.o
-
-# Generated files
-CLEAN_RM = actual-*.png
-
-# Use the cs225 makefile template:
+include src/src_Makefile.mk
 include cs225/make/cs225.mk
