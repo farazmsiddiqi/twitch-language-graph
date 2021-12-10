@@ -4,13 +4,13 @@
 <br />
 <div align="center">
   <a href="http://snap.stanford.edu/data/twitch_gamers.html">
-    <img src="twitch.png" alt="Logo" width="200" height="200">
+    <img src="twitch.png" alt="Logo" width="400" height="400">
   </a>
 
 <h3 align="center">Twitch Gamers and their Social Networks</h3>
 
   <p align="center">
-    Essentially, we want to determine if a Twitch user’s account being listed under a certain language is correlated with a higher view count, and we want to see how many connections it takes for a twitch user to be connected with a foriegn language speaker.
+    Our leading question is twofold. We want to determine the correlation between a Twitch user's account language and the number of views they get. From there, we want to determine how many connections it takes to connect a twitch user who speaks a specific language to a twitch user who does not speak that language. 
     <br />
     <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
@@ -26,9 +26,11 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Linkage and Location</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a>Major Code</a></li>
+        <li><a>Data</a></li>
+        <li><a>Results</a></li>
       </ul>
     </li>
     <li>
