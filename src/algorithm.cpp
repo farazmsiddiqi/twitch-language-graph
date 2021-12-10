@@ -42,18 +42,56 @@ void Algorithm::BFS(Graph& g, int v) {
     }
 }
 
-vector<Node> Algorithm::Dijkstra(Graph & g, Node & start, Node & end) {
-    //std::priority_queue<NodeDist, vector<NodeDist>, NodeDist> pq;
-    //std::map<Node, *Node> back;
-    //std::map<Node, int> dist;
+vector<int> Algorithm::Dijkstra(Graph & g, Node start, Node end) {
+    std::priority_queue<Graph::Edge, vector<Graph::Edge>, Graph::Edge> pq;
+    std::unordered_map<int, Graph::Edge> map;
+    std::unordered_map<int, label> labels;
+    for (auto n: g.getData_map()) {
+        map.insert(std::pair<int, Graph::Edge>(n.second.get_numeric_id(), Graph::Edge(n.second, n.second, INT_MAX)));
+        labels.insert(std::pair<int, label>(n.second.get_numeric_id(), UNEXPLORED));
+    }
+    Graph::Edge startEdge(start, start, 0);
+    map[start.get_numeric_id()] = startEdge;
+    pq.push(startEdge);
 
-    for (auto & n: g.getData_map()) {
-        //dist.insert(std::pair<Node, int>(n.second, INT32_MAX));
+    Graph::Edge curr;
+    
+    while (!pq.empty()) {
+        curr = pq.top();
+        pq.pop();
+        int currNode = curr.src.get_numeric_id();
+
+        labels[currNode] = VISITED;
+
+        if (currNode == end.get_numeric_id()) {
+            break;
+        }
+
+        for(auto e : g.getAdj_list()[currNode]) {
+            Graph::Edge & edge = e.second;
+            Node next = edge.dest;
+
+            if (labels[next.get_numeric_id()] == UNEXPLORED) {
+                double newDist = edge.weight + map[currNode].weight;
+                if (newDist < map[next.get_numeric_id()].weight) {
+                    Graph::Edge newEdge(Node(next.get_numeric_id(), 0, ""), Node(currNode, 0, ""), newDist);
+                    map[next.get_numeric_id()] = newEdge;
+                }
+
+                pq.push(map[next.get_numeric_id()]);
+            }
+        }
+
+        
     }
 
-    //pq.push(Graph::Edge(start, start, 0));
-
-
-
-    return vector<Node>();
+    vector<int> out;
+    while (curr.dest.get_numeric_id() != curr.src.get_numeric_id()) {
+        out.push_back(curr.src.get_numeric_id());
+        curr = map[curr.dest.get_numeric_id()];
+    }
+    out.push_back(curr.src.get_numeric_id());
+    
+    
+    return out;
 }

@@ -31,11 +31,6 @@ class Node {
             language = lang;
         }
 
-        //~Node() {}
-
-        //Node(const Node& n);
-
-        //Node& operator=(const Node& n);
 
         bool makefile_test_func();
 
