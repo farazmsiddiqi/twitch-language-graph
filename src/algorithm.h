@@ -19,6 +19,16 @@ class Algorithm {
       CROSS
     };
 
+    struct NodeDist {
+      Node node;
+      int dist; 
+
+      bool operator()(NodeDist nd1, NodeDist nd2)
+      {
+        return nd1.dist < nd2.dist;
+      }
+    };
+
     std::map<int, label> nodeLabel_;
     std::map<std::pair<int, int>, label> edgeLabel_;
 };

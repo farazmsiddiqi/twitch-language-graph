@@ -2,7 +2,6 @@
 #include <stdexcept>
 #include <queue>
 
-
 void Algorithm::BFS(Graph& g) {
   for (auto n : g.getData_map()) {
       nodeLabel_.insert(std::pair<int, label>(n.first, UNEXPLORED));
@@ -44,7 +43,17 @@ void Algorithm::BFS(Graph& g, int v) {
 }
 
 vector<Node> Algorithm::Dijkstra(Graph & g, Node & start, Node & end) {
-    std::priority_queue<Node> pq;
+    std::priority_queue<NodeDist, vector<NodeDist>, NodeDist> pq;
+    std::map<Node, *Node> back;
+    std::map<Node, int> dist;
+
+    for (auto & n: g.getData_map()) {
+        dist.insert(std::pair<Node, int>(n.second, INT32_MAX));
+    }
+
+    pq.push(Graph::Edge(start, start, 0));
+
+
 
     return vector<Node>();
 }
