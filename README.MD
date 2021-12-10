@@ -15,7 +15,7 @@
     <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.youtube.com/">View Demo (need to update after video is uploaded)</a>
+    <a href="https://www.youtube.com/">View Demo (UPLOAD VIDEO)</a>
   </p>
 </div>
 
