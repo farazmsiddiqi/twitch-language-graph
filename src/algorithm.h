@@ -10,6 +10,7 @@ class Algorithm {
 
     void BFS(Graph& g, int v);
 
+    vector<Node> Dijkstra(Graph & g, Node & start, Node & end);
   private:
     enum label{
       UNEXPLORED,
