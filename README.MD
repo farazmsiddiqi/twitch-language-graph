@@ -12,7 +12,7 @@
   <p align="center">
     Essentially, we want to determine if a Twitch user’s account being listed under a certain language is correlated with a higher view count, and we want to see how many connections it takes for a twitch user to be connected with a foriegn language speaker. Our data could be the basis of a campaign to provide real-time translation to Twitch accounts that speak foreign languages in order to provide more interconnectivity across cultural/language barriers. This analytics tool will be used to visualize platform language disparities on Twitch. If we find that a specific language corresponds to a higher view count, this data can be used to lobby for stronger real-time translations for languages that have lesser viewer counts. This conclusion of this project has the potential to increase viewership for minorities facing a language barrier, spur career growth, and promote ideals of equality on Twitch.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.youtube.com/">View Demo (need to update after video is uploaded)</a>
