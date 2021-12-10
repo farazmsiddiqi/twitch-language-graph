@@ -91,7 +91,9 @@ Graph::Graph(string features_file, string edges_file) {
         Node tmp_node_1 = data_map[node_ids[0]];
         Node tmp_node_2 = data_map[node_ids[1]];
         double weight = ((double) tmp_node_1.get_views() + (double) tmp_node_2.get_views()) / 2.0;
+
         Edge temp_edge1 = Edge(tmp_node_1, tmp_node_2, weight);
+        Edge temp_edge2 = Edge(tmp_node_2, tmp_node_1, weight);
 
         // tmp map is holding previous src's dest vals, and then getting added onto for current src vals
         // tmp_map1[node_ids[1]] = temp_edge1;
@@ -99,11 +101,20 @@ Graph::Graph(string features_file, string edges_file) {
 
         //unordered_map< int, unordered_map< int, Edge> > adj_list;
        if (adj_list[node_ids[0]].size() == 0) {
+
+           // add direction from node_ids[0] -> node_ids[1]
            unordered_map< int, Edge > tmp_map1;
            tmp_map1.insert({node_ids[1], temp_edge1});
            adj_list[node_ids[0]] = tmp_map1;
+
+           // add direction from node_ids[1] -> node_ids[0]
+           unordered_map< int, Edge > tmp_map2;
+           tmp_map2.insert({node_ids[0], temp_edge2});
+           adj_list[node_ids[1]] = tmp_map2;
+
        } else {
            adj_list[node_ids[0]].insert({node_ids[1], temp_edge1});
+           adj_list[node_ids[1]].insert({node_ids[0], temp_edge2});
        }
 
         /*
@@ -113,7 +124,7 @@ Graph::Graph(string features_file, string edges_file) {
             add another (int, Edge) pair to the map
         */
 
-        // Edge temp_edge2 = Edge(tmp_node_2, tmp_node_1, weight);
+        //Edge temp_edge2 = Edge(tmp_node_2, tmp_node_1, weight);
 
         // tmp_map2[node_ids[0]] = temp_edge2;
         // adj_list[node_ids[1]] = tmp_map2;
@@ -127,9 +138,9 @@ Graph::Graph(string features_file, string edges_file) {
 }
 
 void Graph::print_adj_list() {
-    //map iterator
-    // unordered_map< int, unordered_map< int, Edge> > adj_list;
+
     unordered_map< int, unordered_map< int, Edge> >::iterator it;
+
     for (it = adj_list.begin(); it != adj_list.end(); ++it) {
         unordered_map< int, Edge> map = it->second;
         std::cout << "src: " << it->first << std::endl;
