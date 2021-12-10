@@ -22,6 +22,7 @@ using std::unordered_map;
 class Graph {
     
     public:
+
         Graph(string features_file, string edges_file);
 
         struct Edge {
@@ -36,14 +37,28 @@ class Graph {
                 dest = d;
                 weight = w;
             }
+
+            bool operator()(Edge e1, Edge e2)
+            {
+                return e1.weight > e2.weight;
+            }
         };
 
         bool makefile_test() {
             return true;
         }
 
+        // key: nodeid1 value: 23_nodeid2
+
+        /**
+         * print out the adjacency list to console. 
+         */
         void print_adj_list();
        
+        bool hasNode(int nodeID);
+
+        unordered_map< int, Node > getData_map();
+        unordered_map< int, unordered_map< int, Edge> > getAdj_list();
     private:
         unordered_map< int, Node > data_map;
         
