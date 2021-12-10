@@ -43,15 +43,15 @@ void Algorithm::BFS(Graph& g, int v) {
 }
 
 vector<Node> Algorithm::Dijkstra(Graph & g, Node & start, Node & end) {
-    std::priority_queue<NodeDist, vector<NodeDist>, NodeDist> pq;
-    std::map<Node, *Node> back;
-    std::map<Node, int> dist;
+    //std::priority_queue<NodeDist, vector<NodeDist>, NodeDist> pq;
+    //std::map<Node, *Node> back;
+    //std::map<Node, int> dist;
 
     for (auto & n: g.getData_map()) {
-        dist.insert(std::pair<Node, int>(n.second, INT32_MAX));
+        //dist.insert(std::pair<Node, int>(n.second, INT32_MAX));
     }
 
-    pq.push(Graph::Edge(start, start, 0));
+    //pq.push(Graph::Edge(start, start, 0));
 
 
 
