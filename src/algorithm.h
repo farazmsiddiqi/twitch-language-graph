@@ -9,6 +9,7 @@ class Algorithm {
     void BFS(Graph& g);
 
     void BFS(Graph& g, int v);
+
   private:
     enum label{
       UNEXPLORED,
@@ -19,5 +20,4 @@ class Algorithm {
 
     std::map<int, label> nodeLabel_;
     std::map<std::pair<int, int>, label> edgeLabel_;
-
 };
