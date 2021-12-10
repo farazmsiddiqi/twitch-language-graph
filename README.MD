@@ -79,7 +79,7 @@ Our data could be the basis of a campaign to provide real-time translation to Tw
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## How to run our code
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
