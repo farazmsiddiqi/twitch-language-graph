@@ -26,7 +26,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Linkage and Location</a>
+      <a href="#linkage-and-location">Linkage and Location</a>
       <ul>
         <li><a>Major Code</a></li>
         <li><a>Data</a></li>
@@ -34,14 +34,14 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">How to run our code</a>
+      <a href="#how-to-run-our-code">How to run our code</a>
       <ul>
         <li><a>Commands to run the assignments</a></li>
         <li><a>Selecting input/output locations</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Testing Suite</a>
+      <a href="#testing-suite">Testing Suite</a>
       <ul>
         <li><a>Description</a></li>
         <li><a>How to reproduce tests</a></li>
