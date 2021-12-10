@@ -43,6 +43,11 @@ class Graph {
             return true;
         }
 
+        // key: nodeid1 value: 23_nodeid2
+
+        /**
+         * print out the adjacency list to console. 
+         */
         void print_adj_list();
        
         bool hasNode(int nodeID);
