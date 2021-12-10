@@ -1,20 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
--->
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -22,10 +7,10 @@
     <img src="twitch.png" alt="Logo" width="200" height="200">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Twitch gamers and the correlation between langauge and view count</h3>
 
   <p align="center">
-    project_description
+    Essentially, we want to determine if a Twitch user’s account being listed under a certain language is correlated with a higher view count, and we want to see how many connections it takes for a twitch user to be connected with a foriegn language speaker. Our data could be the basis of a campaign to provide real-time translation to Twitch accounts that speak foreign languages in order to provide more interconnectivity across cultural/language barriers. This analytics tool will be used to visualize platform language disparities on Twitch. If we find that a specific language corresponds to a higher view count, this data can be used to lobby for stronger real-time translations for languages that have lesser viewer counts. This conclusion of this project has the potential to increase viewership for minorities facing a language barrier, spur career growth, and promote ideals of equality on Twitch.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
