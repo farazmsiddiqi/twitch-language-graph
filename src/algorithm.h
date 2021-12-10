@@ -2,14 +2,22 @@
 
 #include "graph.h"
 #include "node.h"
-
+#include <map>
 
 class Algorithm {
   public:
-    Algorithm(Graph& g);
+    void BFS(Graph& g);
 
-    int BFS(Node start, Node target);
+    void BFS(Graph& g, int v);
   private:
-    Graph& graph_;
+    enum label{
+      UNEXPLORED,
+      VISITED,
+      DISCOVERY,
+      CROSS
+    };
+
+    std::map<int, label> nodeLabel_;
+    std::map<std::pair<int, int>, label> edgeLabel_;
 
 };

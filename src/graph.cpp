@@ -124,3 +124,11 @@ void Graph::print_adj_list() {
 bool Graph::hasNode(int nodeID) {
     return data_map.find(nodeID) != data_map.end(); 
 }
+
+unordered_map<int, Node> Graph::getData_map() {
+    return data_map;
+}
+
+unordered_map< int, unordered_map< int, Graph::Edge> > Graph::getAdj_list() {
+    return adj_list;
+}

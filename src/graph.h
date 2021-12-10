@@ -22,6 +22,7 @@ using std::unordered_map;
 class Graph {
     
     public:
+
         Graph(string features_file, string edges_file);
 
         struct Edge {
@@ -45,6 +46,9 @@ class Graph {
         void print_adj_list();
        
         bool hasNode(int nodeID);
+
+        unordered_map< int, Node > getData_map();
+        unordered_map< int, unordered_map< int, Edge> > getAdj_list();
     private:
         unordered_map< int, Node > data_map;
         

@@ -2,38 +2,43 @@
 #include <stdexcept>
 #include <queue>
 
-Algorithm::Algorithm(Graph& g) {
-    graph_ = g;
+
+void Algorithm::BFS(Graph& g) {
+  for (auto n : g.getData_map()) {
+      nodeLabel_.insert(std::pair(n.first, UNEXPLORED));
+
+      unordered_map<int, Graph::Edge> map = g.getAdj_list().at(n.first);
+      for (auto e: map) {
+          std::pair<int,int> edge(n.first, e.first);
+          edgeLabel_.insert(std::pair<edge, UNEXPLORED));
+      }
+  }
+
+  for (auto v: g.getData_map()) {
+      if (nodeLabel_[v.first] == UNEXPLORED) {
+          BFS(g, v.first);
+      }
+  }
 }
 
-int Algorithm::BFS(Node start, Node target) {
-    if (!graph_.hasNode(start)) {
-        throw std::invalid_argument("The start node is not in the graph");
-    }
-
-    if (!graph.hasNode(target)) {
-        throw std::invalid_argument("The target node is not in the graph");
-    }
-    
-    //queue for BFS
+void Algorithm::BFS(Graph& g, int v) {
     std::queue<int> q;
+    nodeLabel_[v] = VISITED;
+    q.push(v);
 
-    startID = start.get_numeric_id();
-    q.push(startID);
-
-    //map from nodeID to distance
-    unordered_map<int, int> visited;
-
-    //add first pair
-    std::pair<int, int> startPair(startID, 0);
-    visited.insert(startID);
-
-    Node curr = 
-    while (!q.empty()) {
-        
-
+    while(!q.empty()) {
+        v = q.front;
+        q.pop;
+        unordered_map<int, Graph::Edge> adj = g.getAdj_list().at(v);
+        for (auto w : adj) {
+            std::pair<int, int> edge(v, w.first);
+            if (nodeLabel_[w.first] == UNEXPLORED) {
+                edgeLabel_[edge] = DISCOVERY;
+                nodeLabel_[w.first] = VISITED;
+                q.push(w.first);
+            } else if (edgeLabel_[edge] == UNEXPLORED) {
+                edgeLabel_[edgeLabel_] == CROSS;
+            }
+        }
     }
-
-    
-    return -1;
 }
