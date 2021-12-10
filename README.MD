@@ -36,16 +36,17 @@
     <li>
       <a href="#getting-started">How to run our code</a>
       <ul>
-        <li><a href="#prerequisites">Commands to run the assignments</a></li>
-        <li><a href="#installation">Selecting input/output locations</a></li>
+        <li><a>Commands to run the assignments</a></li>
+        <li><a>Selecting input/output locations</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#getting-started">Testing Suite</a>
+      <ul>
+        <li><a>Description</a></li>
+        <li><a>How to reproduce tests</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
