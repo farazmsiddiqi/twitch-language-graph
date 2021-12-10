@@ -34,10 +34,10 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">How to run our code</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Commands to run the assignments</a></li>
+        <li><a href="#installation">Selecting input/output locations</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -52,7 +52,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Linkage and Location
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
