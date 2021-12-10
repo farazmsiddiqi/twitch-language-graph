@@ -32,6 +32,10 @@ TEST_CASE("Test Dijkstra", "[weight=1][part=1][valgrind]") {
 
     vector<int> tester = algo.Dijkstra(graph, node1, node2);
 
+    
     REQUIRE(tester.size() == 3);
+    REQUIRE(tester[0] == 2);
+    REQUIRE(tester[1] == 3);
+    REQUIRE(tester[2] == 0);
 }
 
