@@ -10,12 +10,23 @@ class Algorithm {
 
     void BFS(Graph& g, int v);
 
+    vector<Node> Dijkstra(Graph & g, Node & start, Node & end);
   private:
     enum label{
       UNEXPLORED,
       VISITED,
       DISCOVERY,
       CROSS
+    };
+
+    struct NodeDist {
+      Node node;
+      int dist; 
+
+      bool operator()(NodeDist nd1, NodeDist nd2)
+      {
+        return nd1.dist < nd2.dist;
+      }
     };
 
     std::map<int, label> nodeLabel_;
