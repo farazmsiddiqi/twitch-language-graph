@@ -58,14 +58,24 @@
 * #### Major code location
   The code is broken up into seperate subsections located within their respective folders, much like the organization of our MPs was.
 
-  Under the [.objs](#heading-1 "Goto heading-1") folder, we have three main folders, along with a main.d and main.o file that contain the source paths to the graph and node header files.
+  Under the [cs225](#heading-1 "Goto heading-1") folder, under [make](#heading-1 "Goto heading-1") we have our Make file for the project saved as [cs225.mk](#heading-1 "Goto heading-1").
 
-    * Under the [cs225/catch] folder within [.objs], we have our     catchmain.d and catchmain.o files that contain paths to our 
-    catch.hpp files. 
+  Under the [src](#heading-1 "Goto heading-1") folder, we have six files primarily related to our algortithm implementation, our graph implemtations, and the node class. 
+    * The [algorithm.cpp](#heading-1 "Goto heading-1") and [algorithm.h](#heading-1 "Goto heading-1")   
+
+  
+
+
 
   
   
 * #### Data location
+  Under the [data](#heading-1 "Goto heading-1") folder, we have the [README.txt](#heading-1 "Goto heading-1") that contains a summary of our data. 
+    * For the location of the actual data, click [here](http://snap.stanford.edu/data/twitch_gamers.html) for the website we used for the database. After you are on the page, navgiate down to the Files section and download the [twitch_gamers.zip][large_twitch_edges.csv](#heading-1 "Goto heading-1") file. Then, go to the [data](#heading-1 "Goto heading-1") folder and create a new folder called [real_data][large_twitch_edges.csv](#heading-1 "Goto heading-1").  Now open up the downloaded zip file and move the [large_twitch_edges.csv](#heading-1 "Goto heading-1") and the [large_twitch_features.csv](#heading-1 "Goto heading-1") into the [real_data](#heading-1 "Goto heading-1") folder and save them as seperate CSV files. 
+
+
+
+
 * #### Results location 
 
 
