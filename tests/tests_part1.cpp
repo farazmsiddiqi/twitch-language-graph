@@ -28,14 +28,14 @@ TEST_CASE("Twitch::Makefile node class compiles", "[weight=1][part=1][valgrind]"
 
 TEST_CASE("Twitch::Makefile graph class compiles", "[weight=1][part=1][valgrind]") {
 
-    Graph graph = Graph("data/test_features.csv", "data/test_edges.csv");
+    Graph graph = Graph("data/test_data/test_features.csv", "data/test_data/test_edges.csv");
 
     REQUIRE( graph.makefile_test() == true);
 }
 
 TEST_CASE("Twitch::adj_list read correctly", "[weight=1][part=1][valgrind]") {
 
-    Graph graph = Graph("data/test_features.csv", "data/test_edges.csv");
+    Graph graph = Graph("data/test_data/test_features.csv", "data/test_data/test_edges.csv");
 
     vector<int> correct_src_keys = {0, 1, 2, 3};
     vector< vector<int> > correct_dest_keys = 

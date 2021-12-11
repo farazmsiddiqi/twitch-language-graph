@@ -23,7 +23,7 @@ TEST_CASE("graph class compiles using Dijkstra", "[weight=1][part=1][valgrind]")
 
 TEST_CASE("Test Dijkstra", "[weight=1][part=1][valgrind]") {
 
-    Graph graph = Graph("data/Dijsktra_features.csv", "data/Dijsktra_edges.csv");
+    Graph graph = Graph("data/test_data/Dijsktra_features.csv", "data/test_data/Dijsktra_edges.csv");
 
     Algorithm algo;
 
