@@ -58,7 +58,7 @@
 * #### Major code location
   The code is broken up into seperate subsections located within their respective folders, much like the organization of our MPs was.
 
-  Under the [.objs] folder, we have three main folders, along with a main.d and main.o file that contain the source paths to the graph and node header files.
+  Under the [.objs](#heading-1 "Goto heading-1") folder, we have three main folders, along with a main.d and main.o file that contain the source paths to the graph and node header files.
 
       * Under the [cs225/catch] folder within [.objs], we have our     catchmain.d and catchmain.o files that contain paths to our 
       catch.hpp files. 
