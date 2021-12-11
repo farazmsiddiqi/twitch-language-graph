@@ -54,7 +54,7 @@
 
 
 <!-- Location of our code -->
-## Linkage and Location
+## Location of code
 * #### Major code location
 * #### Data location
 * #### Results location 
