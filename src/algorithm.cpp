@@ -46,6 +46,9 @@ vector<int> Algorithm::Dijkstra(Graph & g, Node start, Node end) {
     std::priority_queue<Graph::Edge, vector<Graph::Edge>, Graph::Edge> pq;
     std::unordered_map<int, Graph::Edge> map;
     std::unordered_map<int, label> labels;
+
+    std::unordered_map<int, std::unordered_map<int, Graph::Edge>> aList = g.get_adj_list();
+
     for (auto n: g.get_data_map()) {
         map.insert(std::pair<int, Graph::Edge>(n.second.get_numeric_id(), Graph::Edge(n.second, n.second, INT_MAX)));
         labels.insert(std::pair<int, label>(n.second.get_numeric_id(), UNEXPLORED));
@@ -67,7 +70,8 @@ vector<int> Algorithm::Dijkstra(Graph & g, Node start, Node end) {
             break;
         }
 
-        for(auto e : g.get_adj_list()[currNode]) {
+        std::unordered_map<int, Graph::Edge> edgeList = aList[currNode];
+        for(auto e : edgeList) {
             Graph::Edge & edge = e.second;
             Node next = edge.dest;
 

@@ -71,6 +71,12 @@
         "utility": "cpp",
         "vector": "cpp",
         "list": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "clocale": "cpp",
+        "strstream": "cpp",
+        "*.tcc": "cpp",
+        "cfenv": "cpp",
+        "cinttypes": "cpp",
+        "typeindex": "cpp"
     }
 }
