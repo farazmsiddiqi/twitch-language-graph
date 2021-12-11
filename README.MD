@@ -10,7 +10,7 @@
 <h3 align="center">Twitch Gamers and their Social Networks</h3>
 
   <p align="center">
-    Our leading question is twofold. We want to determine the correlation between a Twitch user's account language and the number of views they get. From there, we want to determine how many connections it takes to connect a twitch user who speaks a specific language to a twitch user who does not speak that language. 
+    Our leading question is twofold. We want to determine the correlation between a Twitch user's account language and the number of views they get. From there, we  want to determine how many connections it takes to connect a twitch user who speaks a specific language to a twitch user who does not speak that language. 
     <br />
     <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
@@ -54,8 +54,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Linkage and Location
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Our data could be the basis of a campaign to provide real-time translation to Twitch accounts that speak foreign languages in order to provide more interconnectivity across cultural/language barriers. This analytics tool will be used to visualize platform language disparities on Twitch. If we find that a specific language corresponds to a higher view count, this data can be used to lobby for stronger real-time translations for languages that have lesser viewer counts. This conclusion of this project has the potential to increase viewership for minorities facing a language barrier, spur career growth, and promote ideals of equality on Twitch.
 
@@ -117,7 +115,6 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -131,7 +128,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [] Feature 3
     - [] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -153,53 +149,4 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-
-# Template taken from: https://github.com/othneildrew/Best-README-Template
+### Template taken from: https://github.com/othneildrew/Best-README-Template
