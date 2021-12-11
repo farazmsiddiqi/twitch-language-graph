@@ -26,7 +26,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#linkage-and-location">Linkage and Location</a>
+      <a href="#linkage-and-location">Location of code</a>
       <ul>
         <li><a>Major Code</a></li>
         <li><a>Data</a></li>
@@ -53,25 +53,21 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
+<!-- Location of our code -->
 ## Linkage and Location
-
-Our data could be the basis of a campaign to provide real-time translation to Twitch accounts that speak foreign languages in order to provide more interconnectivity across cultural/language barriers. This analytics tool will be used to visualize platform language disparities on Twitch. If we find that a specific language corresponds to a higher view count, this data can be used to lobby for stronger real-time translations for languages that have lesser viewer counts. This conclusion of this project has the potential to increase viewership for minorities facing a language barrier, spur career growth, and promote ideals of equality on Twitch.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- GETTING STARTED -->
+<!-- How to run our code -->
 ## How to run our code
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
-<!-- USAGE EXAMPLES -->
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Testing suite -->
 ## Testing Suite
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
