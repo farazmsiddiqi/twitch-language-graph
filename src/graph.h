@@ -55,10 +55,13 @@ class Graph {
          */
         void print_adj_list();
        
-        bool hasNode(int nodeID);
+        bool has_node(int nodeID);
 
-        unordered_map< int, Node > getData_map();
-        unordered_map< int, unordered_map< int, Edge> > getAdj_list();
+        unordered_map< int, Node > get_data_map();
+
+        unordered_map< int, unordered_map< int, Edge> > get_adj_list() const;
+        
+
     private:
         unordered_map< int, Node > data_map;
         
