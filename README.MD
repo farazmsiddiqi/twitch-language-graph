@@ -72,7 +72,7 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Testing suite -->
-## Testing Suite
+## Testing suite
 * #### Description
 * #### How to build and run the test suite
 * #### How to reproduce tests 
