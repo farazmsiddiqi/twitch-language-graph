@@ -16,14 +16,14 @@
 
 TEST_CASE("graph class compiles using Dijkstra", "[weight=1][part=1][valgrind]") {
 
-    Graph graph = Graph("data/Dijsktra_features.csv", "data/Dijsktra_edges.csv");
+    Graph graph = Graph("data/test_data/Dijkstra_features.csv", "data/test_data/Dijkstra_edges.csv");
     graph.print_adj_list();
     REQUIRE( graph.makefile_test() == true);
 }
 
 TEST_CASE("Test Dijkstra", "[weight=1][part=1][valgrind]") {
 
-    Graph graph = Graph("data/Dijsktra_features.csv", "data/Dijsktra_edges.csv");
+    Graph graph = Graph("data/test_data/Dijkstra_features.csv", "data/test_data/Dijkstra_edges.csv");
 
     Algorithm algo;
 
