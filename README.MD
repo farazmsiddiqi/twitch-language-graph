@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="http://snap.stanford.edu/data/twitch_gamers.html">
-    <img src="twitch.png" alt="Logo" width="400" height="400">
+    <img src="twitch.png" alt="Logo" width="300" height="300">
   </a>
 
 <h3 align="center">Twitch Gamers and their Social Networks</h3>
