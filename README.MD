@@ -44,6 +44,7 @@
       <a href="#testing-suite">Testing Suite</a>
       <ul>
         <li><a>Description</a></li>
+        <li><a>How to build and run the test suite</a></li>
         <li><a>How to reproduce tests</a></li>
       </ul>
     </li>
