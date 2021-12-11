@@ -55,9 +55,9 @@
 
 <!-- Location of our code -->
 ## Linkage and Location
-* ### Major code location
-* Data location
-* Results location 
+* #### Major code location
+* #### Data location
+* #### Results location 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -66,13 +66,16 @@
 
 <!-- How to run our code -->
 ## How to run our code
-
+* #### Commands to run the assignments
+* #### Selecting input/output locations
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Testing suite -->
 ## Testing Suite
-
+* #### Description
+* #### How to build and run the test suite
+* #### How to reproduce tests 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
