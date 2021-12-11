@@ -150,15 +150,15 @@ void Graph::print_adj_list() {
     }
 }
 
-bool Graph::hasNode(int nodeID) {
+bool Graph::has_node(int nodeID) {
     return data_map.find(nodeID) != data_map.end(); 
 }
 
-unordered_map<int, Node> Graph::getData_map() {
+unordered_map<int, Node> Graph::get_data_map() {
     return data_map;
 }
 
-unordered_map< int, unordered_map< int, Graph::Edge> > Graph::getAdj_list() {
+unordered_map< int, unordered_map< int, Graph::Edge> > Graph::get_adj_list() const {
     return adj_list;
 }
 

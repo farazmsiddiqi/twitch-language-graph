@@ -27,11 +27,10 @@ TEST_CASE("Test Dijkstra", "[weight=1][part=1][valgrind]") {
 
     Algorithm algo;
 
-    Node node1 = graph.getData_map()[0];
-    Node node2 = graph.getData_map()[2];
+    Node node1 = graph.get_data_map()[0];
+    Node node2 = graph.get_data_map()[2];
 
     vector<int> tester = algo.Dijkstra(graph, node1, node2);
 
     REQUIRE(tester.size() == 3);
 }
-
