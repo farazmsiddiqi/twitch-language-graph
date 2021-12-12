@@ -20,7 +20,9 @@ TEST_CASE("Test BFS", "[weight=1][part=1][valgrind]") {
 
     Algorithm algo;
 
-    vector<int> tester = algo.BFS(graph);
+    Node n = graph.get_data_map()[0];
+
+    vector<int> tester = algo.BFS(graph, n);
 
     REQUIRE(tester.size() == 4);
 }
@@ -32,8 +34,9 @@ TEST_CASE("Test large BFS", "[weight=1][part=1][valgrind]") {
 
     Algorithm algo;
 
+    Node n = graph.get_data_map()[0];
 
-    vector<int> tester = algo.BFS(graph);
+    vector<int> tester = algo.BFS(graph, n);
 
     REQUIRE(tester.size() == 17);
     REQUIRE(tester[0] == 0);
@@ -53,5 +56,4 @@ TEST_CASE("Test large BFS", "[weight=1][part=1][valgrind]") {
     REQUIRE(tester[14] == 8);
     REQUIRE(tester[15] == 6);
     REQUIRE(tester[16] == 9);
-    
 }
