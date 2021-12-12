@@ -2,7 +2,8 @@
 #include <stdexcept>
 #include <queue>
 
-void Algorithm::BFS(Graph& g) {
+vector<int> Algorithm::BFS(Graph& g, Node& n) {
+  vector<int> out;
   for (auto n : g.get_data_map()) {
       nodeLabel_.insert(std::pair<int, label>(n.first, UNEXPLORED));
 
@@ -13,19 +14,24 @@ void Algorithm::BFS(Graph& g) {
       }
   }
 
+  BFS(g, n.get_numeric_id(), out);
+
   for (auto v: g.get_data_map()) {
       if (nodeLabel_[v.first] == UNEXPLORED) {
-          BFS(g, v.first);
+          BFS(g, v.first, out);
       }
   }
+
+  return out;
 }
 
-void Algorithm::BFS(Graph& g, int v) {
+void Algorithm::BFS(Graph& g, int v, vector<int>& out) {
     std::queue<int> q;
     nodeLabel_[v] = VISITED;
+    out.push_back(v);
     q.push(v);
 
-    while(!q.empty()) {
+    while (!q.empty()) {
         v = q.front();
         q.pop();
         unordered_map<int, Graph::Edge> adj = g.get_adj_list().at(v);
@@ -35,6 +41,7 @@ void Algorithm::BFS(Graph& g, int v) {
                 edgeLabel_[edge] = DISCOVERY;
                 nodeLabel_[w.first] = VISITED;
                 q.push(w.first);
+                out.push_back(w.first); 
             } else if (edgeLabel_[edge] == UNEXPLORED) {
                 edgeLabel_[edge] = CROSS;
             }
@@ -99,3 +106,5 @@ vector<int> Algorithm::Dijkstra(Graph & g, Node start, Node end) {
     
     return out;
 }
+
+void Algorithm::SCC(Graph& g) { }

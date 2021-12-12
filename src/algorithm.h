@@ -6,11 +6,13 @@
 
 class Algorithm {
   public:
-    void BFS(Graph& g);
+    vector<int> BFS(Graph& g, Node& n);
 
-    void BFS(Graph& g, int v);
+    void BFS(Graph& g, int v, vector<int>& vect);
 
     vector<int> Dijkstra(Graph & g, Node start, Node end);
+
+    void SCC(Graph& g);
   private:
     enum label{
       UNEXPLORED,
