@@ -77,7 +77,7 @@
   
 * #### Data location
   Under the [data](#heading-1 "Goto heading-1") folder, we have the [README.txt](#heading-1 "Goto heading-1") that contains a summary of our data. 
-    * For the location of the actual data, click [here](http://snap.stanford.edu/data/twitch_gamers.html) for the website we used for the database. After you are on the page, navgiate down to the Files section and download the [twitch_gamers.zip][large_twitch_edges.csv](#heading-1 "Goto heading-1") file. Then, go to the [data](#heading-1 "Goto heading-1") folder and create a new folder called [real_data][large_twitch_edges.csv](#heading-1 "Goto heading-1").  Now open up the downloaded zip file and move the [large_twitch_edges.csv](#heading-1 "Goto heading-1") and the [large_twitch_features.csv](#heading-1 "Goto heading-1") into the [real_data](#heading-1 "Goto heading-1") folder and save them as seperate CSV files. 
+    * For the location of the actual data, click [here](http://snap.stanford.edu/data/twitch_gamers.html) for the website we used for the database. After you are on the page, navgiate down to the Files section and download the [twitch_gamers.zip][large_twitch_edges.csv](#heading-1 "Goto heading-1") file. Then, go to the [data](#heading-1 "Goto heading-1") folder and create a new folder called [real_data][large_twitch_edges.csv](#heading-1 "Goto heading-1").  Now open up the downloaded zip file and move the [large_twitch_edges.csv](#heading-1 "Goto heading-1") and the [large_twitch_features.csv](#heading-1 "Goto heading-1") into the [real_data](#heading-1 "Goto heading-1") folder and save them as seperate CSV files. You can now run our code as intented after saving to the appropriate folder. 
 
 
 
