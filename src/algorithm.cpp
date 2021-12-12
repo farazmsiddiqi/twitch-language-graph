@@ -2,7 +2,8 @@
 #include <stdexcept>
 #include <queue>
 
-void Algorithm::BFS(Graph& g) {
+vector<int> Algorithm::BFS(Graph& g) {
+  vector<int> out;
   for (auto n : g.get_data_map()) {
       nodeLabel_.insert(std::pair<int, label>(n.first, UNEXPLORED));
 
@@ -15,14 +16,16 @@ void Algorithm::BFS(Graph& g) {
 
   for (auto v: g.get_data_map()) {
       if (nodeLabel_[v.first] == UNEXPLORED) {
-          BFS(g, v.first);
+          BFS(g, v.first, out);
       }
   }
+  return out;
 }
 
-void Algorithm::BFS(Graph& g, int v) {
+void Algorithm::BFS(Graph& g, int v, vector<int>& out) {
     std::queue<int> q;
     nodeLabel_[v] = VISITED;
+    out.push_back(v);
     q.push(v);
 
     while(!q.empty()) {
@@ -35,6 +38,7 @@ void Algorithm::BFS(Graph& g, int v) {
                 edgeLabel_[edge] = DISCOVERY;
                 nodeLabel_[w.first] = VISITED;
                 q.push(w.first);
+                out.push_back(w.first); 
             } else if (edgeLabel_[edge] == UNEXPLORED) {
                 edgeLabel_[edge] = CROSS;
             }
