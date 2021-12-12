@@ -107,4 +107,67 @@ vector<int> Algorithm::Dijkstra(Graph & g, Node start, Node end) {
     return out;
 }
 
-void Algorithm::SCC(Graph& g) { }
+int Algorithm::SCC(Graph& g) {
+    int biggest_scc = 0;
+    std::vector<std::vector<int>> connected_components;
+    std::stack<int> s;
+
+    int numNodes = g.get_data_map().size();
+    bool *visited = new bool[numNodes];
+
+    for (int i = 0; i < numNodes; i++) {
+        visited[i] = false;
+    }
+
+    for (int i  = 0; i < numNodes; i++) {
+        if (!visited[i]) {
+            FillStackSCCOrder(g, i, visited, s);
+        }
+    }
+
+
+    for (int i = 0; i < numNodes; i++) {
+        visited[i] = false;
+    }
+
+    while (!s.empty()) {
+        int node = s.top();
+        s.pop();
+
+        if (!visited[node]) {
+            vector<int> new_scc;
+            DFSFromStart(g, node, visited, new_scc);
+            std::cout<< new_scc.size() <<std::endl;
+            connected_components.push_back(new_scc);
+            biggest_scc = std::max(biggest_scc, (int) new_scc.size());
+        }
+    }
+
+    return biggest_scc;
+}
+
+void Algorithm::DFSFromStart(Graph& g, int n, bool visited[], vector<int>& out) {
+    visited[n] = true;
+    out.push_back(n);
+
+    unordered_map<int, unordered_map<int, Graph::Edge>> map = g.get_adj_list();
+    for(auto edgeMap : map[n]) {
+        if (!visited[edgeMap.first]) {
+            DFSFromStart(g, edgeMap.first, visited, out);
+        }
+    }
+}
+
+void Algorithm::FillStackSCCOrder(Graph& g, int n, bool visited[], std::stack<int>& s) {
+    visited[n] = true;
+
+    unordered_map<int, unordered_map<int, Graph::Edge>> map = g.get_adj_list();
+    for (auto edgeMap : map[n]) {
+        if (!visited[edgeMap.first]) {
+            FillStackSCCOrder(g, edgeMap.first, visited, s);
+        }
+    }
+
+    s.push(n);
+}
+
