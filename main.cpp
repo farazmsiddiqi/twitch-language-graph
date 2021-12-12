@@ -8,7 +8,7 @@
 
 int main() {
   
-  Graph g = Graph("data/test_data/test_features.csv", "data/test_data/test_edges.csv");
+  Graph g = Graph("data/test_data/test_features.csv", "data/test_data/test_edges.csv", "EN");
 
   g.print_adj_list();
 

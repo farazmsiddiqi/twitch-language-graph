@@ -23,7 +23,27 @@ class Graph {
     
     public:
 
+        /**
+         * Take a node attribute file (features_file) and a node relationship file (edges_file).
+         * Build a graph represented by an adjacency list of nodes.
+         * 
+         * @param features_file a node attribute file to build nodes for the graph.
+         * @param edges_file a file describing relationships between nodes.
+         * 
+         **/
         Graph(string features_file, string edges_file);
+
+        /**
+         * Take a node attribute file (features_file), node relationship file (edges_file),
+         * and a language (lang). Build a graph represented by an adjacency list of nodes 
+         * who only speak the specified language.
+         * 
+         * @param features_file a node attribute file to build nodes for the graph.
+         * @param edges_file a file describing relationships between nodes.
+         * @param lang determining what language every node (twitch streamer) in the graph speaks (ex: "EN").
+         * 
+         **/
+        Graph(string features_file, string edges_file, string lang);
 
         struct Edge {
             Node src;
@@ -60,7 +80,7 @@ class Graph {
         unordered_map< int, Node > get_data_map();
 
         unordered_map< int, unordered_map< int, Edge> > get_adj_list() const;
-        
+
 
     private:
         unordered_map< int, Node > data_map;
