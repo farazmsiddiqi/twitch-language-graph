@@ -61,10 +61,16 @@
   Under the [cs225](#heading-1 "Goto heading-1") folder, under [make](#heading-1 "Goto heading-1") we have our Make file for the project saved as [cs225.mk](#heading-1 "Goto heading-1").
 
   Under the [src](#heading-1 "Goto heading-1") folder, we have six files primarily related to our algortithm implementation, our graph implemtations, and the node class. 
-    * The [algorithm.cpp](#heading-1 "Goto heading-1") and [algorithm.h](#heading-1 "Goto heading-1")   
 
-  
+    * The [algorithm.cpp](#heading-1 "Goto heading-1") and [algorithm.h](#heading-1 "Goto heading-1") contain the implementation and declaration of the BFS and Dijkstras algorithms. 
 
+    * The [graph.cpp](#heading-1 "Goto heading-1") and [graph.h](#heading-1 "Goto heading-1") files contain the creation and implemenation of our graph class, as well as ways to print and get our adjacency list. These files contain edges, and the declarations and usage of our adjacency list.
+
+    * The [node.cpp](#heading-1 "Goto heading-1") and [node.h](#heading-1 "Goto heading-1") files contain our node constructors and numerous get methods for each of our nodes in the dataset. This includes get methods for views, languages, and numeric ids. We have also created the set methods for those. 
+
+  Under the [tests](#heading-1 "Goto heading-1") folder, we have custom made tests for our graph creation as well as tests for Djikstras and BFS. 
+
+  Our [main.cpp](#heading-1 "Goto heading-1") file is located outside all folders mentioend above and is placed independently. 
 
 
   
