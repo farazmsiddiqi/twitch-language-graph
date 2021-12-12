@@ -10,7 +10,7 @@
 <h3 align="center">Twitch Gamers and their Social Networks</h3>
 
   <p align="center">
-    Our leading question is twofold. We want to determine the correlation between a Twitch user's account language and the number of views they get. From there, we  want to determine how many connections it takes to connect a twitch user who speaks a specific language to a twitch user who does not speak that language. 
+    We want to determine **the size of Twitch's largest community**. From there, we want to see what percentage of Twitch's largest community speaks the same language. We define community as a connected component where each user has a mutual follower relationship with every other user in the community. This 'same language percentage' can show how interconnected the Twitch global community is. If we find that the largest Twitch community is overwhelmingly comprised of one language, then we can conclude that Twitch's largest community is not diverse. 
     <br />
     <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
@@ -60,9 +60,9 @@
 
   Under the [cs225](#heading-1 "Goto heading-1") folder, under [make](#heading-1 "Goto heading-1") we have our Make file for the project saved as [cs225.mk](#heading-1 "Goto heading-1").
 
-  Under the [src](#heading-1 "Goto heading-1") folder, we have six files primarily related to our algortithm implementation, our graph implemtations, and the node class. 
+  Under the [src](#heading-1 "Goto heading-1") folder, we have six files primarily related to our algorithm implementations, our graph implemtations, and the node class. 
 
-    * The [algorithm.cpp](#heading-1 "Goto heading-1") and [algorithm.h](#heading-1 "Goto heading-1") contain the implementation and declaration of the BFS and Dijkstras algorithms. 
+    * The [algorithm.cpp](#heading-1 "Goto heading-1") and [algorithm.h](#heading-1 "Goto heading-1") contain the implementation and declaration of the BFS, Dijkstras, and the Kosaraju algorithms. 
 
     * The [graph.cpp](#heading-1 "Goto heading-1") and [graph.h](#heading-1 "Goto heading-1") files contain the creation and implemenation of our graph class, as well as ways to print and get our adjacency list. These files contain edges, and the declarations and usage of our adjacency list.
 
