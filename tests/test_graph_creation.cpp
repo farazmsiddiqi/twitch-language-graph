@@ -13,9 +13,7 @@
 #include "../src/graph.h"
 
 TEST_CASE("Twitch::Makefile makefile works", "[weight=1][part=1][valgrind]") {
-
-    std::cout << "\n if this message is showing, our makefile works!" << std::endl;
-
+    // tests if the test_file is recognized by makefile.
     REQUIRE( 10 == 10 );
 }
 
