@@ -8,10 +8,10 @@
 
 <div class="row">
   <div class="column">
-    <img src="/images/one.png" alt="Snow" style="width:100%">
+    <img src="/images/one.png" alt="Snow" style="height:350">
   </div>
   <div class="column">
-    <img src="/images/one.png" alt="Forest" style="width:100%">
+    <img src="/images/one.png" alt="Forest" style="height:350">
   </div>
 </div>
 
