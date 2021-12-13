@@ -1,0 +1,56 @@
+# Results
+
+#### **Structure and Team Process**:
+ We tackled the project by first getting data from the CSV to build the main graph and the hashmap of {nodes to feature vector}. Our implementation included building the BFS traversal algorithm to collect the average number of views per streamer and store data in their respective language group. This was done in the first two weeks and later, we implemented Dijkstra’s Algorithm pathfinder to see the average distance between social circles who speak different languages. Upon successful completion of the previous algorithms, our group hit a road block. Our inital thought process was to calculate the average number of views per social circle using the Eulerian path for the largest cycle. The problem is, with our previous implementation of BFS and the connectivity of our data set, using a Eulerian path was not useful as there are not that many connected components in our graph and did not fit our leading question. Ultimately we decided to update our project proposal to utilize a more applicable algorithm, the Kosaraju's Algorithm, to find the largest strongly connected component in our dataset, and return the size of the largest connected component. Overall, the algorithms were implemented in a timely fashion and fulfills all requirements of the final project. 
+
+#### **Breadth First Search Algorithm (BFS)**:
+ To prove that the BFS algorithm worked, we implemented several test cases to access its accuracy. From these tests cases we can find that the BFS worked as intended as our algorithm is intended to visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level. Second, a hashmap is instantiated to associate each node (user) with a set of features (languages, etc). From there, an adjacency list is used to build a graph of our users. 
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column">
+    <img src="/images/one.png" alt="Snow" height="350">
+  </div>
+  <div class="column">
+    <img src="/images/one.png" alt="Forest" height="350">
+  </div>
+</div>
+
+</body>
+</html>
+
+#### **Dijkstra's Algorithm**:
+ We will start by using the BFS traversal to analyze our graphed dataset. We will specifically implement a level-order traversal where we visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level.  The input we expect to take in is CSV of features, and node connections. Since this is a level-order BFS traversal, the target runtime is optimal at O(n). From there, we will create a hashmap from node id to feature vector. This associates each node (user) with a set of features (languages, etc). From there, we will use an adjacency list to build a graph of our users. Our CSV file will determine which users are connected. The output will range, based on the language input, of how many views a user is expected to get (for example, a German user may get anywhere from 50-100 views, while an English user may get around 20-6,000 views). In order to implement the path finding algorithm, in this case Dijkstra’s Algorithm, we will check the smallest number of edges needed to reach the social circle of another Twitch user who speaks a different language. For this path finding algorithm, we will be targeting an O(ElogV) time where E is the number of edges, and V is the number of vertices. This social circle will be implemented using the largest circle we can make, and this is through the Eulerian path. This large circle will be made using languages. After finding social circles for every language, we will calculate the average view count for each circle and see if a language corresponds to a higher view count.  In order to detect the Eulerian path, we will use Fleury’s path detection algorithm. Fleury’s will be used to display the Euler path or Euler circuit from a given graph., The graph becomes simpler in each step to find the Euler path or circuit. This algorithm is ideally going to be run in O(V + E), where E is edges and V is number of vertices. 
+
+ #### **Kosarajus's Algorithm**:
+ We will start by using the BFS traversal to analyze our graphed dataset. We will specifically implement a level-order traversal where we visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level.  The input we expect to take in is CSV of features, and node connections. Since this is a level-order BFS traversal, the target runtime is optimal at O(n). From there, we will create a hashmap from node id to feature vector. This associates each node (user) with a set of features (languages, etc). From there, we will use an adjacency list to build a graph of our users. Our CSV file will determine which users are connected. The output will range, based on the language input, of how many views a user is expected to get (for example, a German user may get anywhere from 50-100 views, while an English user may get around 20-6,000 views). In order to implement the path finding algorithm, in this case Dijkstra’s Algorithm, we will check the smallest number of edges needed to reach the social circle of another Twitch user who speaks a different language. For this path finding algorithm, we will be targeting an O(ElogV) time where E is the number of edges, and V is the number of vertices. This social circle will be implemented using the largest circle we can make, and this is through the Eulerian path. This large circle will be made using languages. After finding social circles for every language, we will calculate the average view count for each circle and see if a language corresponds to a higher view count.  In order to detect the Eulerian path, we will use Fleury’s path detection algorithm. Fleury’s will be used to display the Euler path or Euler circuit from a given graph., The graph becomes simpler in each step to find the Euler path or circuit. This algorithm is ideally going to be run in O(V + E), where E is edges and V is number of vertices. 
+ 
+  #### **Final Thoughts**:
+ We will start by using the BFS traversal to analyze our graphed dataset. We will specifically implement a level-order traversal where we visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level.  The input we expect to take in is CSV of features, and node connections. Since this is a level-order BFS traversal, the target runtime is optimal at O(n). From there, we will create a hashmap from node id to feature vector. This associates each node (user) with a set of features (languages, etc). From there, we will use an adjacency list to build a graph of our users. Our CSV file will determine which users are connected. The output will range, based on the language input, of how many views a user is expected to get (for example, a German user may get anywhere from 50-100 views, while an English user may get around 20-6,000 views). In order to implement the path finding algorithm, in this case Dijkstra’s Algorithm, we will check the smallest number of edges needed to reach the social circle of another Twitch user who speaks a different language. For this path finding algorithm, we will be targeting an O(ElogV) time where E is the number of edges, and V is the number of vertices. This social circle will be implemented using the largest circle we can make, and this is through the Eulerian path. This large circle will be made using languages. After finding social circles for every language, we will calculate the average view count for each circle and see if a language corresponds to a higher view count.  In order to detect the Eulerian path, we will use Fleury’s path detection algorithm. Fleury’s will be used to display the Euler path or Euler circuit from a given graph., The graph becomes simpler in each step to find the Euler path or circuit. This algorithm is ideally going to be run in O(V + E), where E is edges and V is number of vertices. 
+
+
