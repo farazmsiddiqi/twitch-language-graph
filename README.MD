@@ -120,7 +120,7 @@
 * #### How to reproduce tests 
   In order to create and run your own test cases for this project, you will need to simply add on test cases, their names, and their weights to our existing test files. We have such files for our graphs, our Dijikstras, BFS, and Kosarajus. 
 
-  To reproduce for BFS, you need to make your own graph from the test_data folder provided in the format [Graph graph = Graph("data/test_data/test_large_features.csv", "data/test_data/test_large_edges.csv")](#heading-1 "Goto heading-1"). Then, you need to create a Algorithm object such as [Algorithm algo](#heading-1 "Goto heading-1" ), as well as a Node object that such as [Node n = graph.get_data_map()[0]](#heading-1 "Goto heading-1" ) that gets a certain index of the get_data_map that is created. Then, you need to make a vector of integers that you can parse using indeces in BFS. This is done like [vector<int> tester = algo.BFS(graph, n)](#heading-1 "Goto heading-1"). 
+  To reproduce for BFS, you need to make your own graph from the test_data folder provided in the format [Graph graph = Graph("data/test_data/test_large_features.csv", "data/test_data/test_large_edges.csv")](#heading-1 "Goto heading-1") with the above line for the Dijkstras features and edges as well. Then, you need to create a Algorithm object such as [Algorithm algo](#heading-1 "Goto heading-1" ), as well as a Node object that such as [Node n = graph.get_data_map()[0]](#heading-1 "Goto heading-1" ) that gets a certain index of the get_data_map that is created. Then, you need to make a vector of integers that you can parse using indeces in BFS. This is done like [vector<int> tester = algo.BFS(graph, n)](#heading-1 "Goto heading-1"). 
 
   * To create the assertions for the test case, you can do vector.size() to make sure its the correct length, and then check if each index of your vector is at the correct number. This example is like 
   [REQUIRE(tester.size() == 17)](#heading-1 "Goto heading-1").
@@ -131,8 +131,13 @@
 
   * For the assertions, simply check if the correct source and destination keys are equal to your custom made vector and vector of vectors for the source and destination keys.
 
-  To reproduce the Dijkstras tests, similar to how we tested BFS and the graphs, we ened to make a graph using the data in test_data. This is example is [Graph graph = Graph("data/test_data/Dijkstra_features.csv", "data/test_data/Dijkstra_edges.csv")](#heading-1 "Goto heading-1"). Then, we make another Algorithm object just in BFS. We then create two node objects similar to [Node node1 = graph.get_data_map()][0](#heading-1 "Goto heading-1"). 
-]
+  To reproduce the Dijkstras tests, similar to how we tested BFS and the graphs, we ened to make a graph using the data in test_data. This is example is [Graph graph = Graph("data/test_data/Dijkstra_features.csv", "data/test_data/Dijkstra_edges.csv")](#heading-1 "Goto heading-1"). Then, we make another Algorithm object just in BFS. We then create two node objects similar to [Node node1 = graph.get_data_map()](#heading-1 "Goto heading-1"). We have two node objects in this case at different indices (like 0 and 2). We then create a vector and set it equal to with our Algorithm object (Dijkstras this time), and the made graph and two nodes: [vector<int> tester = algo.Dijkstra(graph, node1, node2)](#heading-1 "Goto heading-1"). 
+
+  * For the asstertions, check if the vector at certain indices (like 0, 2, or 3) are your desired number: [REQUIRE(tester[0] == 2)](#heading-1 "Goto heading-1").
+
+  For the strongly connected components (or Kosaraju's Algoithm), the testing is very similar to our two other algorithms. We create a graph [Graph graph = Graph("data/test_data/SCC_features.csv", "data/test_data/SCC_edges.csv")](#heading-1 "Goto heading-1") with the SCC edges and feautes instead of Dijikstras and BFS. We then create an algorithm object, and this time we make an integer instead of a vector. This integer (int) is set to the algorithm object's SCC graph: [int tester = algo.SCC(graph)](#heading-1 "Goto heading-1").
+  * For the assertions, we set the "tester" equal to to a desired number.  
+
 
 
 
