@@ -36,7 +36,7 @@
  #### **Final Thoughts**:
 
  <p align="center">
-  <img src="/images/final.jpeg" height="50%" width="50%" /> 
+  <img src="/images/final.jpeg" height="75%" width="75%" /> 
 </p>
 
 
