@@ -3,8 +3,10 @@
 #### **Structure and Team Process**:
  We tackled the project by first getting data from the CSV to build the main graph and the hashmap of {nodes to feature vector}. Our implementation included building the BFS traversal algorithm to collect the average number of views per streamer and store data in their respective language group. This was done in the first two weeks and later, we implemented Dijkstra’s Algorithm pathfinder to see the average distance between social circles who speak different languages. Upon successful completion of the previous algorithms, our group hit a road block. Our inital thought process was to calculate the average number of views per social circle using the Eulerian path for the largest cycle. The problem is, with our previous implementation of BFS and the connectivity of our data set, using a Eulerian path was not useful as there are not that many connected components in our graph and did not fit our leading question. Ultimately we decided to update our project proposal to utilize a more applicable algorithm, the Kosaraju's Algorithm, to find the largest strongly connected component in our dataset, and return the size of the largest connected component. Overall, the algorithms were implemented in a timely fashion and fulfills all requirements of the final project. 
 
-<img src="/images/one.png" height="350" align="right"" />
-<img src="/images/one.png" height="350" align="right"" /> 
+<p float="left">
+  <img src="/images/one.png" height="350" align="right"" />
+  <img src="/images/one.png" height="350" align="right"" /> 
+</p>
 
 #### **Breadth First Search Algorithm (BFS)**:
  To prove that the BFS algorithm worked, we implemented several test cases to access its accuracy. From these tests cases we can find that the BFS worked as intended as our algorithm is intended to visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level. Second, a hashmap is instantiated to associate each node (user) with a set of features (languages, etc). From there, an adjacency list is used to build a graph of our users. 
