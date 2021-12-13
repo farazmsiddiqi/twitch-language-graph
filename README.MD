@@ -131,6 +131,11 @@
 
   * For the assertions, simply check if the correct source and destination keys are equal to your custom made vector and vector of vectors for the source and destination keys.
 
+  To reproduce the Dijkstras tests, similar to how we tested BFS and the graphs, we ened to make a graph using the data in test_data. This is example is [Graph graph = Graph("data/test_data/Dijkstra_features.csv", "data/test_data/Dijkstra_edges.csv")](#heading-1 "Goto heading-1"). Then, we make another Algorithm object just in BFS. We then create two node objects similar to [Node node1 = graph.get_data_map()][0](#heading-1 "Goto heading-1"). 
+]
+
+
+
   
 
   
