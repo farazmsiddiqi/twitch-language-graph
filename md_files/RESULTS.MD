@@ -5,7 +5,7 @@
 
 <p float="left">
   <img src="/images/one.png" height="350" align="left"" />
-  <img src="/images/one.png" height="350" align="right"" /> 
+  <img src="/images/one.png" height="350"" /> 
 </p>
 
 #### **Breadth First Search Algorithm (BFS)**:
