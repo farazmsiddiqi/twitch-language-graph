@@ -1,4 +1,4 @@
-#Final Project Proposal
+# Final Project Proposal
 
 #### **Leading Question**:
  We want to determine **the size of Twitch's largest community**. From there, we want to see what percentage of Twitch's largest community speaks the same language. We define community as a connected component where each user has a mutual follower relationship with every other user in the community. This 'same language percentage' can show how interconnected the Twitch global community is. If we find that the largest Twitch community is overwhelmingly comprised of one language, then we can conclude that Twitch's largest community is not diverse. Our data could be the justification for a campaign to provide real-time translation to Twitch accounts that speak foreign languages in order to provide more inter-connectivity across cultural/language barriers. The conclusion of this project has the potential to highlight the connectivity of Twitch streamers who speak different languages and promote ideals of equality on Twitch.

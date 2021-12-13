@@ -10,12 +10,12 @@
 <h3 align="center">Twitch Gamers and their Social Networks</h3>
 
   <p align="center">
-    We want to determine **the size of Twitch's largest community**. From there, we want to see what percentage of Twitch's largest community speaks the same language. We define community as a connected component where each user has a mutual follower relationship with every other user in the community. This 'same language percentage' can show how interconnected the Twitch global community is. If we find that the largest Twitch community is overwhelmingly comprised of one language, then we can conclude that Twitch's largest community is not diverse. 
+    We want to determine the size of Twitch's largest community. From there, we want to see what percentage of Twitch's largest community speaks the same language. We define community as a connected component where each user has a mutual follower relationship with every other user in the community. This 'same language percentage' can show how interconnected the Twitch global community is. If we find that the largest Twitch community is overwhelmingly comprised of one language, then we can conclude that Twitch's largest community is not diverse. 
     <br />
     <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.youtube.com/">View Demo (UPLOAD VIDEO)</a>
+    <a href="https://www.youtube.com/">Link to final presentation (UPLOAD VIDEO)</a>
   </p>
 </div>
 
@@ -68,7 +68,7 @@
 
     * The [node.cpp](#heading-1 "Goto heading-1") and [node.h](#heading-1 "Goto heading-1") files contain our node constructors and numerous get methods for each of our nodes in the dataset. This includes get methods for views, languages, and numeric ids. We have also created the set methods for those. 
 
-  Under the [tests](#heading-1 "Goto heading-1") folder, we have custom made tests for our graph creation as well as tests for Djikstras and BFS. 
+  Under the [tests](#heading-1 "Goto heading-1") folder, we have custom made tests for our graph creation as well as tests for Djikstras BFS, and our Kosaraju's a;gorithms. 
 
   Our [main.cpp](#heading-1 "Goto heading-1") file is located outside all folders mentioend above and is placed independently. 
 
@@ -82,7 +82,9 @@
 
 
 
-* #### Results location 
+* #### Results location
+  
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -91,18 +93,40 @@
 
 <!-- How to run our code -->
 ## How to run our code
-* #### Commands to run the assignments
-* #### Selecting input/output locations
+* #### Commands to run to build and run project
+To build the project, you first need to run [git pull](#heading-1 "Goto heading-1") in your terminal. 
+
+Then, run [make clean](#heading-1 "Goto heading-1").
+
+Then, we need to run [make](#heading-1 "Goto heading-1") to build the project and the make file, then run [./main](#heading-1 "Goto heading-1") to run the whole project.
+
+
+
+
+* #### Defining input data and output locations for each method
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Testing suite -->
 ## Testing suite
 * #### Description
+  We tested large and small data sets for each of our algorithms, as well as tested edge cases for each them. We have seperate test files for BFS, Dijkstras, our graph implemenation, and our strongly connected components (Kosaraju's) algorithms. 
+
+
 * #### How to build and run the test suite
+  To do this, we need to run [make](#heading-1 "Goto heading-1") to build the suite, then run [./test](#heading-1 "Goto heading-1") to run the whole suite.
+
 * #### How to reproduce tests 
+  In order to create and run your own test cases for this project, you will need to simply add on test cases, their names, and their weights to our existing test files. We have such files for our graphs, our Dijikstras, BFS, and Kosarajus. 
+
+  To reproduce for BFS, you need to make your own graph from the test_data folder provided in the format [Graph graph = Graph("data/test_data/test_large_features.csv", "data/test_data/test_large_edges.csv")](#heading-1 "Goto heading-1"). Then, you need to create a Algorithm object such as [Algorithm algo](#heading-1 "Goto heading-1" ), as well as a Node object that such as [Node n = graph.get_data_map()[0]](#heading-1 "Goto heading-1" ) that gets a certain index of the get_data_map that is created. Then, you need to make a vector of integers that you can parse using indeces in BFS. This is done like [vector<int> tester = algo.BFS(graph, n)](#heading-1 "Goto heading-1"). 
+
+  * To create the assertions for the test case, you can do vector.size() to make sure its the correct length, and then check if each index of your vector is at the correct number. This example is like 
+  [REQUIRE(tester.size() == 17)](#heading-1 "Goto heading-1").
+  [REQUIRE(tester[0] == 0)](#heading-1 "Goto heading-1").
+  [REQUIRE(tester[1] == 15)](#heading-1 "Goto heading-1"). 
+
+  To reproduce Graph tests, you need to accurately test if the adjacency list works. This is again done by making your own graph from the test_data folder provided in the format [Graph graph = Graph("data/test_data/test_large_features.csv", "data/test_data/test_large_edges.csv")](#heading-1 "Goto heading-1"). Now, you need to make 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-##### Template taken from: https://github.com/othneildrew/Best-README-Template
