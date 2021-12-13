@@ -8,7 +8,7 @@
 
 <p float="left">
   <img src="/images/two.png" height="350" width="350"/>
-  <img src="/images/three.png" height="350" width="350"/> 
+  <img src="/images/three.png" height="350" /> 
 </p>
 
 
@@ -17,7 +17,7 @@
 
 <p float="left">
   <img src="/images/one.png" height="350" width="350"/>
-  <img src="/images/four.png" height="350" width="350"/> 
+  <img src="/images/four.png" height="350" /> 
 </p>
 
 #### **Dijkstra's Algorithm**:
