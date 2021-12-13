@@ -21,6 +21,10 @@
 
 #### **Dijkstra's Algorithm**:
  In order to implement the path finding algorithm, we used Dijkstra’s Algorithm. This involved us checking, at each node, the minimum weighted path required  to reach our destination. This path finding algorithm takes O(mlogn) time where m is the number of edges, and n is the number of vertices. To ensure that this worked, and the algorithm acted as intended, we created multiple test cases to assess its accuracy. As a baseline test, we made sure that the graph still worked with Dijkstra's Algorithm as without it working in the makefile, nothing else would work. We proceeded to test our algorithms on the two datasets, both of which are different in sizes. First, we made a graph object that can read in our data set. Second, we ran our algorithm on two different data maps from the graph. We tested the accuracy of the algorithm by ensuring that each index in the resulting vector matched the data set as a inital tester. We repeated this test for the larger data set which secured that our algorithm was working as intended. 
+
+<p align="center">
+  <img src="/images/five.png" height="50%" width="50%" /> 
+</p>
  
 
  #### **Kosarajus's Algorithm**:
