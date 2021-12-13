@@ -104,7 +104,13 @@
 
 
 * #### Defining input data and output locations for each method
+  For each algorithm, the Nodes input is in the format [(numeric_id_1,numeric_id_2)](#heading-1 "Goto heading-1"), taken from the edges dataset in our Data folder. The numeric id 1 and numeric id 2 are the starting and ending nodes connecting the largest edges in our dataset. The graphs are in the format  [(views,mature,life_time,created_at,updated_at,numeric_id,dead_account,language,affiliate)](#heading-1 "Goto heading-1"), where views are the total views of that account, mature is whether the user is listed as mature or not, lifetime is the days the account has been active, created at is the data of creation, updated at is the data the account was last updated, numeric id is the id of the account, dead account is if the account is no longer active, and language is the primary language of the account. 
 
+
+  
+  *  BFS: The BFS algorithm takes in a graph, loaded in from BFS features and edges and/or Dijkstras edges and features CSV, and a Node. This outputs a vector of integers in the order they are traversed in from the source.
+  *  Dijkstras: The Dijkstras algorithm takes in a graph, loaded in from a Dijkstras edges and features CSV, a starting node, and an ending node. This outputs a vector of integers in the reverse order they were visited in from destination to source.
+  *  Kosarajus (SCC): This takes in a graph, loaded in from a SCC edges and features CSV, and outputs the size of the biggest strongly connected component in the dataset as an int. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
