@@ -127,6 +127,6 @@ Then, we need to run [make](#heading-1 "Goto heading-1") to build the project an
   [REQUIRE(tester[0] == 0)](#heading-1 "Goto heading-1").
   [REQUIRE(tester[1] == 15)](#heading-1 "Goto heading-1"). 
 
-  To reproduce Graph tests, you need to accurately test if the adjacency list works. This is again done by making your own graph from the test_data folder provided in the format [Graph graph = Graph("data/test_data/test_large_features.csv", "data/test_data/test_large_edges.csv")](#heading-1 "Goto heading-1"). Now, you need to make 
+  To reproduce Graph tests, you need to accurately test if the adjacency list works. This is again done by making your own graph from the test_data folder provided in the format [Graph graph = Graph("data/test_data/test_large_features.csv", "data/test_data/test_large_edges.csv")](#heading-1 "Goto heading-1"). Now, you need to make a vector of the correct source and a  vector of vectors for destination keys (in the form of tuples), such as [vector<int> correct_src_keys = {0, 1, 2, 3}](#heading-1 "Goto heading-1"). You then create an empty vector for your own source keys, and an empty vector of vectors for the destination keys. You then create an adjacency list and load in the source and destination keys using a nested for loop. (See example in [test_graph_creation](#heading-1 "Goto heading-1")). 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
