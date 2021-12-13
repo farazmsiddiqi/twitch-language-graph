@@ -107,9 +107,6 @@
   *  BFS: The BFS algorithm takes in a graph, loaded in from BFS features and edges and/or Dijkstras edges and features CSV, and a Node. This outputs a vector of integers in the order they are traversed in from the source.
   *  Dijkstras: The Dijkstras algorithm takes in a graph, loaded in from a Dijkstras edges and features CSV, a starting node, and an ending node. This outputs a vector of integers in the reverse order they were visited in from destination to source.
   *  Kosarajus (SCC): This takes in a graph, loaded in from a SCC edges and features CSV, and outputs the size of the biggest strongly connected component in the dataset as an int. 
-  * ##### Graphs:  
-
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
