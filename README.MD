@@ -94,11 +94,11 @@
 <!-- How to run our code -->
 ## How to run our code
 * #### Commands to run to build and run project
-To build the project, you first need to run [git pull](#heading-1 "Goto heading-1") in your terminal. 
+  To build the project, you first need to run [git pull](#heading-1 "Goto heading-1") in your terminal. 
 
-Then, run [make clean](#heading-1 "Goto heading-1").
+  Then, run [make clean](#heading-1 "Goto heading-1").
 
-Then, we need to run [make](#heading-1 "Goto heading-1") to build the project and the make file, then run [./main](#heading-1 "Goto heading-1") to run the whole project.
+  Then, we need to run [make](#heading-1 "Goto heading-1") to build the project and the make file, then run [./main](#heading-1 "Goto heading-1") to run the whole project.
 
 
 
@@ -128,5 +128,13 @@ Then, we need to run [make](#heading-1 "Goto heading-1") to build the project an
   [REQUIRE(tester[1] == 15)](#heading-1 "Goto heading-1"). 
 
   To reproduce Graph tests, you need to accurately test if the adjacency list works. This is again done by making your own graph from the test_data folder provided in the format [Graph graph = Graph("data/test_data/test_large_features.csv", "data/test_data/test_large_edges.csv")](#heading-1 "Goto heading-1"). Now, you need to make a vector of the correct source and a  vector of vectors for destination keys (in the form of tuples), such as [vector<int> correct_src_keys = {0, 1, 2, 3}](#heading-1 "Goto heading-1"). You then create an empty vector for your own source keys, and an empty vector of vectors for the destination keys. You then create an adjacency list and load in the source and destination keys using a nested for loop. (See example in [test_graph_creation](#heading-1 "Goto heading-1")). 
+
+  * For the assertions, simply check if the correct source and destination keys are equal to your custom made vector and vector of vectors for the source and destination keys.
+
+  
+
+  
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
