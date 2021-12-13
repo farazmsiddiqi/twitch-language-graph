@@ -19,19 +19,19 @@ using std::string;
 class Node {
 
     public:
-        Node() {
-            numeric_id = -1;
-            views = 0;
-            language = "";
-        }
+        /**
+         * Empty Node constructor. inits to default vals.
+         **/
+        Node();
 
-        Node(int id, int num_views, string lang) {
-            numeric_id = id;
-            views = num_views;
-            language = lang;
-        }
+        /**
+         * Node ctor that sets values.
+         **/
+        Node(int id, int num_views, string lang);
 
-
+        /**
+         * tests to see if node class is linked with make file
+         **/
         bool makefile_test_func();
 
         // getters
@@ -45,20 +45,6 @@ class Node {
 
         string get_language() {
             return language;
-        }
-
-        // setters
-
-        void set_views(int num_views) {
-            views = num_views;
-        }
-
-        void set_numeric_id(int id) {
-            numeric_id = id;
-        }
-
-        void set_language(string lang) {
-            language = lang;
         }
 
     private:
