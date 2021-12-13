@@ -1,7 +1,5 @@
 #include "graph.h"
 
-
-// modularize
 Graph::Graph(string features_file, string edges_file) {
 
     std::fstream fin_features(features_file);
@@ -145,8 +143,6 @@ Graph::Graph(string features_file, string edges_file, string lang) {
         if (language.compare(lang) == 0) {
             data_map[numeric_id] = Node(numeric_id, views, language);
         }
-
-
     }
 
     string edge_line, id;
@@ -168,6 +164,11 @@ Graph::Graph(string features_file, string edges_file, string lang) {
             node_ids.push_back(std::stoi(id));
         }
 
+        /*
+            The try-catch prevents tmp_nodes 
+            from being created when the node_ids 
+            do not exist in the data_map.
+        */
         try {
             Node tmp_node_1 = data_map.at(node_ids[0]);
             Node tmp_node_2 = data_map.at(node_ids[1]);
@@ -194,7 +195,7 @@ Graph::Graph(string features_file, string edges_file, string lang) {
                 adj_list[node_ids[1]].insert({node_ids[0], temp_edge2});
             }
 
-        } catch (...) {
+        } catch (...) { // catch all errors
             continue;
         }
     }

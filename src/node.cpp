@@ -1,10 +1,17 @@
 #include "node.h"
 
 bool Node::makefile_test_func() {
-    std::cout 
-    << "\nIf this prints, our main.cpp recognizes our node class," 
-    << " and our node.cpp compiles. In other words, the node class can hold data!" 
-    << std::endl;
-
     return true;
+}
+
+Node::Node() {
+    numeric_id = -1;
+    views = 0;
+    language = "";
+}
+
+Node::Node(int id, int num_views, string lang) {
+    numeric_id = id;
+    views = num_views;
+    language = lang;
 }

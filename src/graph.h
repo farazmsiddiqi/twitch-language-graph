@@ -15,9 +15,7 @@ using std::unordered_map;
 
 /**
  * This class will be used to hold a Graph's data.
- * 
  **/
-
 
 class Graph {
     
@@ -64,17 +62,25 @@ class Graph {
             }
         };
 
+        /**
+         * test to see if makefile recognizes graph class.
+         * 
+         * @return a boolean 'ping-pong' response.
+         **/
         bool makefile_test() {
             return true;
         }
-
-        // key: nodeid1 value: 23_nodeid2
 
         /**
          * print out the adjacency list to console. 
          */
         void print_adj_list();
-       
+
+        /**
+         * determine if a given nodeID has a node.
+         * 
+         * @return true if it has a node, false otherwise.
+         **/
         bool has_node(int nodeID);
 
         unordered_map< int, Node > get_data_map();
@@ -83,8 +89,10 @@ class Graph {
 
 
     private:
+        // Maps node_ids to Node objects.
         unordered_map< int, Node > data_map;
         
+        // Adjacency list containing the graph.
         unordered_map< int, unordered_map< int, Edge> > adj_list;
 
 };
