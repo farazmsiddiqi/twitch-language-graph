@@ -10,5 +10,13 @@ using std::cout;
 using std::endl;
 
 int main() {
+
+  Graph g = Graph("data/real_data/large_twitch_features.csv", "data/real_data/large_twitch_edges.csv", "HU");
+
+  Algorithm algo;
+
+  int largest_hungarian_community = algo.kosaraju_sharir(g);
+
+  std::cout << largest_hungarian_community << std::endl;
   return 0;
 }
