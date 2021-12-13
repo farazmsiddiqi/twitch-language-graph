@@ -6,28 +6,9 @@
 #### **Breadth First Search Algorithm (BFS)**:
  To prove that the BFS algorithm worked, we implemented several test cases to access its accuracy. From these tests cases we can find that the BFS worked as intended as our algorithm is intended to visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level. Second, a hashmap is instantiated to associate each node (user) with a set of features (languages, etc). From there, an adjacency list is used to build a graph of our users. 
 
+<img src="/images/one.png" height="350" width="100%"/>
 <img src="/images/one.png" height="350"/>
-<img src="/images/one.png" height="350"/>
 
-.imgContainer{
-    float:left;
-}
-
-<div class="imgContainer">
-        <img src="/images/one.png" height="200" width="200"/>
-    </div>
-    <div class="imgContainer">
-        <img class="middle-img" src="/images/one.png"/ height="200" width="200"/>
-    </div>
-
-<div class="row">
-  <div class="column">
-    <img src="/images/one.png" alt="Snow" height="350">
-  </div>
-  <div class="column">
-    <img src="/images/one.png" alt="Forest" height="350">
-  </div>
-</div>
 
 </body>
 </html>
