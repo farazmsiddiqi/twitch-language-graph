@@ -104,10 +104,9 @@
 
 
 * #### Defining input data and output locations for each method
-
-For czxcdcs
-adasdasdaa
   * ndisncisncisnies
+  *   ssssss
+    *  
 
 
 
