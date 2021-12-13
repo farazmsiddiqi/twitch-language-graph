@@ -69,3 +69,42 @@ TEST_CASE("Twitch::adj_list read correctly", "[weight=1][part=1][valgrind]") {
 
     //REQUIRE( graph.print_adj_list() == correct_node_keys);
 }
+
+TEST_CASE("Twitch::Specific language graph is read correctly", "[weight=1][part=1][valgrind]") {
+
+    Graph graph = Graph("data/test_data/test_features.csv", "data/test_data/test_edges.csv", "EN");
+
+    vector<int> correct_src_keys = { 2, 3, 0 };
+    vector< vector<int> > correct_dest_keys = 
+    {
+        { 3 }, 
+        { 0, 2 }, 
+        { 3 }
+    };
+
+    vector<int> src_keys;
+    vector< vector<int> > dest_keys;
+    unordered_map< int, unordered_map< int, Graph::Edge> >::iterator test_it;
+    unordered_map< int, unordered_map< int, Graph::Edge> > adjacency_list = graph.get_adj_list();
+
+    // loads the src_keys and dest_keys
+    for (test_it = adjacency_list.begin(); test_it != adjacency_list.end(); ++test_it) {
+        src_keys.push_back(test_it->first);
+        unordered_map< int, Graph::Edge> map = test_it->second;
+
+        vector<int> dests_for_one_src;
+        unordered_map< int, Graph::Edge>::iterator test_it2;
+        for (test_it2 = map.begin(); test_it2 != map.end(); ++test_it2) {
+            dests_for_one_src.push_back(test_it2->first);
+        }
+        dest_keys.push_back(dests_for_one_src);
+        dests_for_one_src.clear();
+    }
+
+    // check them now
+    REQUIRE( correct_src_keys == src_keys );
+    REQUIRE( correct_dest_keys == dest_keys );
+
+    //REQUIRE( graph.print_adj_list() == correct_node_keys);
+}
+
