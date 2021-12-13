@@ -71,4 +71,3 @@ TEST_CASE("Twitch::adj_list read correctly", "[weight=1][part=1][valgrind]") {
 
     //REQUIRE( graph.print_adj_list() == correct_node_keys);
 }
-
