@@ -9,6 +9,16 @@
 <img src="/images/one.png" height="350"/>
 <img src="/images/one.png" height="350"/>
 
+.imgContainer{
+    float:left;
+}
+
+<div class="imgContainer">
+        <img src="/images/one.png" height="200" width="200"/>
+    </div>
+    <div class="imgContainer">
+        <img class="middle-img" src="/images/one.png"/ height="200" width="200"/>
+    </div>
 
 <div class="row">
   <div class="column">
@@ -19,6 +29,8 @@
   </div>
 </div>
 
+</body>
+</html>
 
 #### **Dijkstra's Algorithm**:
  We will start by using the BFS traversal to analyze our graphed dataset. We will specifically implement a level-order traversal where we visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level.  The input we expect to take in is CSV of features, and node connections. Since this is a level-order BFS traversal, the target runtime is optimal at O(n). From there, we will create a hashmap from node id to feature vector. This associates each node (user) with a set of features (languages, etc). From there, we will use an adjacency list to build a graph of our users. Our CSV file will determine which users are connected. The output will range, based on the language input, of how many views a user is expected to get (for example, a German user may get anywhere from 50-100 views, while an English user may get around 20-6,000 views). In order to implement the path finding algorithm, in this case Dijkstra’s Algorithm, we will check the smallest number of edges needed to reach the social circle of another Twitch user who speaks a different language. For this path finding algorithm, we will be targeting an O(ElogV) time where E is the number of edges, and V is the number of vertices. This social circle will be implemented using the largest circle we can make, and this is through the Eulerian path. This large circle will be made using languages. After finding social circles for every language, we will calculate the average view count for each circle and see if a language corresponds to a higher view count.  In order to detect the Eulerian path, we will use Fleury’s path detection algorithm. Fleury’s will be used to display the Euler path or Euler circuit from a given graph., The graph becomes simpler in each step to find the Euler path or circuit. This algorithm is ideally going to be run in O(V + E), where E is edges and V is number of vertices. 
