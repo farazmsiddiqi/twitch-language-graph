@@ -7,8 +7,8 @@
  To prove that the BFS algorithm worked, we implemented several test cases to access its accuracy. From these tests cases we can find that the BFS worked as intended as our algorithm is intended to visit neighboring nodes on the same level first, and then traverse through the next level of nodes by level. Second, a hashmap is instantiated to associate each node (user) with a set of features (languages, etc). From there, an adjacency list is used to build a graph of our users. 
 
 <p float="left">
-  <img src="/images/one.png" height="350" width="50%" />
-  <img src="/images/one.png" height="350" width="50%" /> 
+  <img src="/images/one.png" height="350" width="40%" />
+  <img src="/images/one.png" height="350" width="40%" /> 
 </p>
 
 #### **Dijkstra's Algorithm**:
