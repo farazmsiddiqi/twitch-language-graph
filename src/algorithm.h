@@ -10,32 +10,32 @@ class Algorithm {
 
   public:
     /**
-     * <enter a description about what the fn does>
+     * This function returns a vector of integers in the order they were traversed from the source node . 
      * 
-     * @param g <enter a description>
-     * @param n <enter a description>
+     * @param g <The Graph reference that is a CSV file that includes features of a twtich user, as well as the largest edges between two nodes.>
+     * @param n <The source node "n" to begin traversing from.>
      * 
-     * @return <enter a description>
+     * @return <A vector or integers in the order they were traversed in from the source node.>
      **/
     vector<int> bfs(Graph& g, Node& n);
 
     /**
-     * <enter a description about what the fn does>
+     * <This function returns a vector of integers in the reverse order they were traversed from the end node to the start node.>
      * 
-     * @param g <enter a description>
-     * @param start <enter a description>
-     * @param end <enter a description>
+     * @param g <The Graph reference that is a CSV file that includes features of a twtich user, as well as the largest edges between two nodes.>
+     * @param start <The start node to begin traversing from.>
+     * @param end <The node to end traversing at.>
      * 
-     * @return <enter a description>
+     * @return <Returns a vector of integers in the reverse order they were traversed from the end node to the start node.>
      **/
     vector<int> dijkstra(Graph & g, Node start, Node end);
 
     /**
-     * <enter a description about what the fn does>
+     * <This function returns the size of the largest strongly connected component in the dataset.>
      * 
-     * @param g <enter a description>
+     * @param g <The Graph reference that is a CSV file that includes features of a twtich user, as well as the largest edges between two nodes.>
      * 
-     * @return <enter a description>
+     * @return <The size of the largest strongly connected component>
      **/
     int kosaraju_sharir(Graph& g);
 
@@ -54,37 +54,35 @@ class Algorithm {
     };
 
     /**
-     * <enter a description about what the fn does>
+     * <This is a helper for the primary BFS algorithm above, as it runs a BFS on every node.
+     *  The main BFS algorithm that returns the vector of integers calls the helper.>
      * 
-     * @param g <enter a description>
-     * @param v <enter a description>
-     * @param vect <enter a description>
+     * @param g <The Graph reference that is a CSV file that includes features of a twtich user, as well as the largest edges between two nodes.>
+     * @param v <The index used for the labeler nodes and the output vector.>
+     * @param vect <The output vector that we push the BFS'ed nodes to.>
      * 
-     * @return <enter a description>
      **/
     void bfs(Graph& g, int v, vector<int>& vect);
 
     /**
-     * <enter a description about what the fn does>
+     * <This is a helper for the Dijkstras method that traverses through an adjacency list and recursivley checks which nodes have not been visited.>
      * 
-     * @param g <enter a description>
-     * @param n <enter a description>
-     * @param visited <enter a description>
-     * @param out <enter a description>
+     * @param g <The Graph reference that is a CSV file that includes features of a twtich user, as well as the largest edges between two nodes.>
+     * @param n <The index to use for the visited nodes and for the edge map>
+     * @param visited <A boolean vector of that stores visited nodes.>
+     * @param out <The vector that stores the indices of the stored nodes.>
      * 
-     * @return <enter a description>
      **/
     void dfs_from_start(Graph& g, int n, vector<bool>& visited, vector<int>& out);
 
     /**
-     * <enter a description about what the fn does>
+     * <This method is a helper for our SCC function that populates a stack with the largets storngly connected component in the dataset.>
      * 
-     * @param g <enter a description>
-     * @param n <enter a description>
-     * @param visited <enter a description>
-     * @param s <enter a description>
+     * @param g <The Graph reference that is a CSV file that includes features of a twtich user, as well as the largest edges between two nodes.>
+     * @param n <The index for the visited vector of nodes, and the map.>
+     * @param visited <A boolean vector of that stores visited nodes.>
+     * @param s <The stack to store the nodes in the SCC.>
      * 
-     * @return <enter a description>
      **/
     void fill_stack_scc_order(Graph& g, int n, vector<bool>& visited, std::stack<int>& s);
 
