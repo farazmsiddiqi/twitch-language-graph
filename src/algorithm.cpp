@@ -124,15 +124,15 @@ int Algorithm::kosaraju_sharir(Graph& g) {
         visited[i.first] = false;
     }
 
-    for (int i = 0; i < numNodes; i++) {
-        if (!visited[i]) {
-            fill_stack_scc_order(g, i, visited, s);
+    for (auto i : nodes) {
+        if (!visited[i.first]) {
+            fill_stack_scc_order(g, i.first, visited, s);
         }
     }
 
 
-    for (int i = 0; i < numNodes; i++) {
-        visited[i] = false;
+    for (auto i : nodes) {
+        visited[i.first] = false;
     }
 
     while (!s.empty()) {
@@ -145,6 +145,12 @@ int Algorithm::kosaraju_sharir(Graph& g) {
             connected_components.push_back(new_scc);
             biggest_scc = std::max(biggest_scc, (int) new_scc.size());
         }
+    }
+    for (size_t i = 0; i < connected_components.size(); i++) {
+        for (size_t j = 0; j < connected_components[i].size(); j++) {
+            std::cout << connected_components[i][j] << " ";
+        }
+        std::cout << std::endl << std::endl;
     }
 
     return biggest_scc;
