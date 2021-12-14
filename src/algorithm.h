@@ -10,32 +10,32 @@ class Algorithm {
 
   public:
     /**
-     * Does a level order traversal of the Graph
+     * This function returns a vector of integers in the order they were traversed from the source node. 
      * 
-     * @param g Graph to use the traversal on
-     * @param n Node to start the traversal from
+     * @param g The graph to be analyzed.
+     * @param n The source node "n" to begin traversing from.
      * 
-     * @return a vector of nodes in the order in which the bfs traverals.
+     * @return A vector or integers in the order they were traversed in from the source node.
      **/
     vector<int> bfs(Graph& g, Node& n);
 
     /**
-     * Finds the shortest path between to node using weights
+     * This function finds the shorted path from two nodes using the weights as a metric of distance.
      * 
-     * @param g Graph that is being used
-     * @param start the node at which to start
-     * @param end the node at which to end
+     * @param g The graph to be analyzed.
+     * @param start The start node to begin traversing from.
+     * @param end The node to end traversing at.
      * 
-     * @return the path taken from end to start.
+     * @return Returns a vector of integers in the reverse order they were traversed from the end node to the start node.
      **/
     vector<int> dijkstra(Graph & g, Node start, Node end);
 
     /**
-     * Finds the connected components and prints them to the console
+     * This function returns the size of the largest strongly connected component in the dataset.
      * 
-     * @param g Graph to analyze.
+     * @param g The graph to be analyzed.
      * 
-     * @return the size of the biggest connnected component.
+     * @return The size of the largest strongly connected component.
      **/
     int kosaraju_sharir(Graph& g);
 
@@ -54,31 +54,32 @@ class Algorithm {
     };
 
     /**
-     * Helper for the bfs.
+     * This is a helper for the primary BFS algorithm above, as it runs a BFS on every node.
+     *  The main BFS algorithm that returns the vector of integers calls the helper.
      * 
-     * @param g Graph to traverse
-     * @param v node at which to start
-     * @param vect vector that will be return in the main bfs function
+     * @param g The graph to be analyzed.
+     * @param v The index used for the labeler nodes and the output vector.
+     * @param vect The output vector that we push the BFS'ed nodes to.
      **/
     void bfs(Graph& g, int v, vector<int>& vect);
 
     /**
-     * DFS traversal to help the kasuraju_sharir algo.
+     * This is a helper for the Kosaraju_Sharir method that traverses through an adjacency list and recursivley checks which nodes have not been visited.
      * 
-     * @param g Graph to traverse
-     * @param n Node at which to start
-     * @param visited a map of nodes to a boolean that indicated whether or not it was visited
-     * @param out vector that will be returned in the main function.
+     * @param g The graph to be analyzed.
+     * @param n The index to use for the visited nodes and for the edge map.
+     * @param visited A boolean unordered_map of that stores visited nodes.
+     * @param out The vector that stores the indices of the stored nodes.
      **/
     void dfs_from_start(Graph& g, int n, unordered_map<int, bool>& visited, vector<int>& out);
 
     /**
-     * Fills the stack using DFS and post order addition to the stack
+     * This method is a helper for our SCC function that populates a stack in a post order fashion.
      * 
-     * @param g Graph to traverse
-     * @param n Node at which to start
-     * @param visited a map of nodes to a boolean that indicated whether or not it was visited
-     * @param s Stack to fill
+     * @param g The graph to be analyzed.
+     * @param n The index for the visited vector of nodes, and the map.
+     * @param visited A boolean unordered_map of that stores visited nodes.
+     * @param s The stack to store the nodes in the SCC.
      **/
     void fill_stack_scc_order(Graph& g, int n, unordered_map<int, bool>& visited, std::stack<int>& s);
 
