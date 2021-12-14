@@ -83,7 +83,7 @@
 
 
 * #### Results location
-  
+  The results of our code are produced in the terminal after we run our program. We run the code by running [make clean](#heading-1 "Goto heading-1"), then [make](#heading-1 "Goto heading-1"), then [./main](#heading-1 "Goto heading-1"). We will see here the largest connected components (or largest communities in Twitch) that speak the same European Language. 
 
 
 
