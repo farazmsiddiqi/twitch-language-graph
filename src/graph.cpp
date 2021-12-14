@@ -117,6 +117,7 @@ Graph::Graph(string features_file, string edges_file, string lang) {
     int feat_id_col = 5;
     int feat_view_col = 0;
     int feat_lang_col = 7;
+    int feat_lifetime_col = 2;
 
     // O(n) time
     bool is_on_feature_headers = true;
@@ -139,6 +140,7 @@ Graph::Graph(string features_file, string edges_file, string lang) {
         int numeric_id = std::stoi(features[feat_id_col]);
         int views = std::stoi(features[feat_view_col]);
         string language = features[feat_lang_col];
+        int lifetime = std::stoi(features[feat_lifetime_col]);
 
         if (language.compare(lang) == 0) {
             data_map[numeric_id] = Node(numeric_id, views, language);
@@ -224,7 +226,7 @@ unordered_map<int, Node> Graph::get_data_map() {
     return data_map;
 }
 
-unordered_map< int, unordered_map< int, Graph::Edge> > Graph::get_adj_list() const {
+ unordered_map< int, unordered_map< int, Graph::Edge> > Graph::get_adj_list() {
     return adj_list;
 }
 
