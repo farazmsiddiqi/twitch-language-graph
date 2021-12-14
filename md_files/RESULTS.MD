@@ -34,11 +34,13 @@
 </p>
  
  #### **Final Thoughts**:
- All in all, this project has taught our group many valuable lessons. First, time managment is key in doing any project, especially on projects that require weeks of work and need proper and consitent communication between teammates. Second, is adaptability. It is worth noting moving forward, we should be prepared for our initial plan to not go as expected. Throughout our final project process, we hit many road bumps, with many being that our original idea could not support our given data set we the way our data set is laid out, many algorithms would not work or would be very inefficient. At the end of our project, to answer our leading question, __% percent of Twitch's largest community speaks the same language, and the size of Twitch's largest community is __. To ensure that these answers are correct, we ran all of our test cases and found out that all algorithms and methods worked as intended. Overall, this project tested our knowledge of data structures and algorithms, but also brought upon an experience that will stick with us for a lifetime. 
+ All in all, this project has taught our group many valuable lessons. First, time managment is key in doing any project, especially on projects that require weeks of work and need proper and consitent communication between teammates. Second, is adaptability. It is worth noting moving forward, we should be prepared for our initial plan to not go as expected. Throughout our final project process, we hit many road bumps, with many being that our original idea could not support our given data set we the way our data set is laid out, many algorithms would not work or would be very inefficient. At the end of our project, to answer our leading question, the size of Twitch's largest non-English major European language community is __. To ensure that these answers are correct, we ran all of our test cases and found out that all algorithms and methods worked as intended. Overall, this project tested our knowledge of data structures and algorithms, but also brought upon an experience that will stick with us for a lifetime. 
 
  <p align="center">
   <img src="/images/final.jpeg" height="75%" width="75%" /> 
 </p>
+
+
 
 
 
