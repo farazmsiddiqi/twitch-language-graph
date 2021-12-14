@@ -20,7 +20,7 @@ Mid-Point Check In (Nov 29th - Dec 1st):
 
     *(Dec 10th)* Finish Final Presentation:
         *(Due: Dec 6th)* Complete the implementation of the Dijkstra’s Algorithm pathfinder and see the average distance between social circles who speak different languages.
-        *(Due: Dec 6th)* After finding connections, calculate the average number of views per social circle. Social circle is calculated using the Eulerian path for the largest cycle. 
+        *(Due: Dec 6th)* Complete Kosaraju's algorithm to find the largest CC for each non-eng european language.
         *(Dec 8)* Finish Powerpoint
 
     *(Dec 10)* Finish Practicing
