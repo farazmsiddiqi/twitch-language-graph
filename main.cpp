@@ -11,18 +11,13 @@ using std::endl;
 
 int main() {
 
-  //Graph g = Graph("data/real_data/large_twitch_features.csv", "data/real_data/large_twitch_edges.csv", "FI");
-  Graph g = Graph("data/real_data/large_twitch_features.csv", "data/real_data/large_twitch_edges.csv", "HU");
+  std::string language = "FR";
+  Graph g = Graph("data/real_data/large_twitch_features.csv", "data/real_data/large_twitch_edges.csv", language);
 
-  //Graph g = Graph("data/test_data/test_features.csv", "data/test_data/test_edges.csv", "EN");
   Algorithm algo;
 
-  //int largest_FI_community = algo.kosaraju_sharir(g);
-  int largest_HU_community = algo.kosaraju_sharir(g);
+  int largest_lang_community = algo.kosaraju_sharir(g);
 
-  //g.print_adj_list();
-
-  //std::cout << "largest FI community: " << largest_FI_community << std::endl;
-  std::cout << "largest HU community: " << largest_HU_community << std::endl;
+  std::cout << "largest " << language << " community: " << largest_lang_community << std::endl;
   return 0;
 }
