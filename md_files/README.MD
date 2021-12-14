@@ -7,10 +7,10 @@
     <img src="twitch.png" alt="Logo" width="300" height="300">
   </a>
 
-<h3 align="center">Twitch Gamers and their Social Networks</h3>
+<h3 align="center">The Largest European Language Communities on Twitch</h3>
 
   <p align="center">
-    We want to determine the size of Twitch's largest community. From there, we want to see what percentage of Twitch's largest community speaks the same language. We define community as a connected component where each user has a mutual follower relationship with every other user in the community. This 'same language percentage' can show how interconnected the Twitch global community is. If we find that the largest Twitch community is overwhelmingly comprised of one language, then we can conclude that Twitch's largest community is not diverse. 
+    We want to determine **which major European language has the largest community on Twitch**. We define community as a connected component where each user has a direct OR non-direct follower relationship with every other user in the community. This data will show the biggest European community on Twitch, and will highlight how specific accounts have the potential to get more recognition solely based on their native language. 
     <br />
     <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
@@ -83,7 +83,7 @@
 
 
 * #### Results location
-  
+  The results of our code are produced in the terminal after we run our program. We run the code by running [make clean](#heading-1 "Goto heading-1"), then [make](#heading-1 "Goto heading-1"), then [./main](#heading-1 "Goto heading-1"). We will see here the largest connected components (or largest communities in Twitch) that speak the same European Language. 
 
 
 
