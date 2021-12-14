@@ -10,32 +10,32 @@ class Algorithm {
 
   public:
     /**
-     * <enter a description about what the fn does>
+     * Does a level order traversal of the Graph
      * 
-     * @param g <enter a description>
-     * @param n <enter a description>
+     * @param g Graph to use the traversal on
+     * @param n Node to start the traversal from
      * 
-     * @return <enter a description>
+     * @return a vector of nodes in the order in which the bfs traverals.
      **/
     vector<int> bfs(Graph& g, Node& n);
 
     /**
-     * <enter a description about what the fn does>
+     * Finds the shortest path between to node using weights
      * 
-     * @param g <enter a description>
-     * @param start <enter a description>
-     * @param end <enter a description>
+     * @param g Graph that is being used
+     * @param start the node at which to start
+     * @param end the node at which to end
      * 
-     * @return <enter a description>
+     * @return the path taken from end to start.
      **/
     vector<int> dijkstra(Graph & g, Node start, Node end);
 
     /**
-     * <enter a description about what the fn does>
+     * Finds the connected components and prints them to the console
      * 
-     * @param g <enter a description>
+     * @param g Graph to analyze.
      * 
-     * @return <enter a description>
+     * @return the size of the biggest connnected component.
      **/
     int kosaraju_sharir(Graph& g);
 
@@ -54,37 +54,31 @@ class Algorithm {
     };
 
     /**
-     * <enter a description about what the fn does>
+     * Helper for the bfs.
      * 
-     * @param g <enter a description>
-     * @param v <enter a description>
-     * @param vect <enter a description>
-     * 
-     * @return <enter a description>
+     * @param g Graph to traverse
+     * @param v node at which to start
+     * @param vect vector that will be return in the main bfs function
      **/
     void bfs(Graph& g, int v, vector<int>& vect);
 
     /**
-     * <enter a description about what the fn does>
+     * DFS traversal to help the kasuraju_sharir algo.
      * 
-     * @param g <enter a description>
-     * @param n <enter a description>
-     * @param visited <enter a description>
-     * @param out <enter a description>
-     * 
-     * @return <enter a description>
+     * @param g Graph to traverse
+     * @param n Node at which to start
+     * @param visited a map of nodes to a boolean that indicated whether or not it was visited
+     * @param out vector that will be returned in the main function.
      **/
     void dfs_from_start(Graph& g, int n, unordered_map<int, bool>& visited, vector<int>& out);
 
     /**
-     * <enter a description about what the fn does>
+     * Fills the stack using DFS and post order addition to the stack
      * 
-     * @param g <enter a description>
-     * @param n <enter a description>
-     * @param visited <enter a description>
-     * @param s <enter a description>
-     * 
-     * @return <enter a description>
+     * @param g Graph to traverse
+     * @param n Node at which to start
+     * @param visited a map of nodes to a boolean that indicated whether or not it was visited
+     * @param s Stack to fill
      **/
     void fill_stack_scc_order(Graph& g, int n, unordered_map<int, bool>& visited, std::stack<int>& s);
 
