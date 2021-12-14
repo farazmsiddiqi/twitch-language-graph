@@ -35,19 +35,28 @@
   <img src="/images/six.png" height="50%" width="50%" /> 
 </p>
  
- #### **Final Thoughts**:
+ #### **Results**:
 
 Since the beginning of this project, we sought to answer a question: Which major European language has the largest community on Twitch?
 
 We now have an answer. Using Kosaraju's algorithm on sub-datasets of each language community on Twitch, **we found that Italian was the largest major European language community on Twitch**. This conclusion has one qualification. For the English, German, French, Swedish, and Russian communities, the language-specific social networks that we generated for those languages were too big. Our computers could not calculate the size of the largest strongly connected component for each of these languages because our computers ran out of space. **This is NOT an issue with runtime.** The size of the dataset was simply too large. Because of this, we are assuming that the size of each of these communities is larger than our calculatable sizes, and hence these communities all have a larger presence than the Italian community.
 
- All in all, this project has taught our group many valuable lessons. First, time managment is key in doing any project, especially on projects that require weeks of work and need proper and consitent communication between teammates. Second, is adaptability. We had to deal with our group's tight finals schedules and meet diligently. Overall, this project tested our knowledge of data structures and algorithms, but also brought upon an experience that will stick with us for a lifetime. 
-
- <p align="center">
+<p align="center">
   <img src="/images/final.jpeg" height="75%" width="75%" /> 
 </p>
 
 
+#### **Statistics**:
 
+<p align="center">
+  <img src="/images/fullResults.png" height="75%" width="75%" /> 
+</p>
 
+###### Average: 626.57 Users 
+###### Max: 1203 Users
+###### Min: 254 Users
+###### Standard Deviation: 322.4 
+From this, it is visible that, Italian, the largest major European language community on Twitch is 3.73 standard deviations away from the mean. The minimum, in contrast, is 1.26 standard deviations away from the mean. This shows that the maximum is far more spread out compared to the average which means there is a larger disparity between size of Twitch language communities. 
 
+#### **Final Thoughts**:
+ All in all, this project has taught our group many valuable lessons. First, time managment is key in doing any project, especially on projects that require weeks of work and need proper and consitent communication between teammates. Second, is adaptability. We had to deal with our group's tight finals schedules and meet diligently. Overall, this project tested our knowledge of data structures and algorithms, but also brought upon an experience that will stick with us for a lifetime. 
