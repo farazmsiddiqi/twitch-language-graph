@@ -73,7 +73,7 @@ class Algorithm {
      * @param out <The vector that stores the indices of the stored nodes.>
      * 
      **/
-    void dfs_from_start(Graph& g, int n, vector<bool>& visited, vector<int>& out);
+    void dfs_from_start(Graph& g, int n, unordered_map<int, bool>& visited, vector<int>& out);
 
     /**
      * <This method is a helper for our SCC function that populates a stack with the largets storngly connected component in the dataset.>
@@ -84,7 +84,7 @@ class Algorithm {
      * @param s <The stack to store the nodes in the SCC.>
      * 
      **/
-    void fill_stack_scc_order(Graph& g, int n, vector<bool>& visited, std::stack<int>& s);
+    void fill_stack_scc_order(Graph& g, int n, unordered_map<int, bool>& visited, std::stack<int>& s);
 
     std::map<int, Label> node_label;
 

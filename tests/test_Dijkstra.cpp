@@ -38,6 +38,20 @@ TEST_CASE("Test Dijkstra", "[weight=1][part=1][valgrind]") {
     REQUIRE(tester[2] == 0);
 }
 
+TEST_CASE("Test Dijkstra with no path", "[weight=1][part=1][valgrind]") {
+
+    Graph graph = Graph("data/test_data/SCC_features.csv", "data/test_data/SCC_edges.csv");
+
+    Algorithm algo;
+
+    Node node1 = graph.get_data_map()[0];
+    Node node2 = graph.get_data_map()[2];
+
+    vector<int> tester = algo.dijkstra(graph, node1, node2);
+
+    
+    REQUIRE(tester.size() == 0);
+}
 
 TEST_CASE("Test large Dijkstra", "[weight=1][part=1][valgrind]") {
 

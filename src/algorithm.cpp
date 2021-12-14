@@ -96,6 +96,11 @@ vector<int> Algorithm::dijkstra(Graph & g, Node start, Node end) {
         
     }
 
+    if(curr.src.get_numeric_id() != end.get_numeric_id()) {
+        std::cout << "Route not found" << std::endl;
+        return vector<int>();
+    }
+
     vector<int> out;
     while (curr.dest.get_numeric_id() != curr.src.get_numeric_id()) {
         out.push_back(curr.src.get_numeric_id());
@@ -111,23 +116,23 @@ int Algorithm::kosaraju_sharir(Graph& g) {
     int biggest_scc = 0;
     std::vector<std::vector<int>> connected_components;
     std::stack<int> s;
-
     int numNodes = g.get_data_map().size();
-    vector<bool> visited(numNodes);
+    unordered_map<int, bool> visited;
 
-    for (int i = 0; i < numNodes; i++) {
-        visited[i] = false;
+    unordered_map<int, Node> nodes = g.get_data_map();
+    for (auto i : nodes) {
+        visited[i.first] = false;
     }
 
-    for (int i = 0; i < numNodes; i++) {
-        if (!visited[i]) {
-            fill_stack_scc_order(g, i, visited, s);
+    for (auto i : nodes) {
+        if (!visited[i.first]) {
+            fill_stack_scc_order(g, i.first, visited, s);
         }
     }
 
 
-    for (int i = 0; i < numNodes; i++) {
-        visited[i] = false;
+    for (auto i : nodes) {
+        visited[i.first] = false;
     }
 
     while (!s.empty()) {
@@ -141,11 +146,17 @@ int Algorithm::kosaraju_sharir(Graph& g) {
             biggest_scc = std::max(biggest_scc, (int) new_scc.size());
         }
     }
+    for (size_t i = 0; i < connected_components.size(); i++) {
+        for (size_t j = 0; j < connected_components[i].size(); j++) {
+            std::cout << connected_components[i][j] << " ";
+        }
+        std::cout << std::endl << std::endl;
+    }
 
     return biggest_scc;
 }
 
-void Algorithm::dfs_from_start(Graph& g, int n, vector<bool>& visited, vector<int>& out) {
+void Algorithm::dfs_from_start(Graph& g, int n, unordered_map<int, bool>& visited, vector<int>& out) {
     visited[n] = true;
     out.push_back(n);
 
@@ -157,7 +168,7 @@ void Algorithm::dfs_from_start(Graph& g, int n, vector<bool>& visited, vector<in
     }
 }
 
-void Algorithm::fill_stack_scc_order(Graph& g, int n, vector<bool>& visited, std::stack<int>& s) {
+void Algorithm::fill_stack_scc_order(Graph& g, int n, unordered_map<int, bool>& visited, std::stack<int>& s) {
     visited[n] = true;
 
     unordered_map<int, unordered_map<int, Graph::Edge>> map = g.get_adj_list();
