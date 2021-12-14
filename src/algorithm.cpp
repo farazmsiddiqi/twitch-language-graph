@@ -146,13 +146,6 @@ int Algorithm::kosaraju_sharir(Graph& g) {
             biggest_scc = std::max(biggest_scc, (int) new_scc.size());
         }
     }
-    for (size_t i = 0; i < connected_components.size(); i++) {
-        for (size_t j = 0; j < connected_components[i].size(); j++) {
-            std::cout << connected_components[i][j] << " ";
-        }
-        std::cout << std::endl << std::endl;
-    }
-
     return biggest_scc;
 }
 

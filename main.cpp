@@ -10,16 +10,34 @@ using std::cout;
 using std::endl;
 
 int main() {
+  unordered_map<string, int> result;
 
-  Graph g = Graph("data/real_data/large_twitch_features.csv", "data/real_data/large_twitch_edges.csv", "FI");
+  result["CS"] = 0;
+  result["DA"] = 0;
+  result["FI"] = 0;
+  result["HU"] = 0;
+  result["IT"] = 0;
+  result["NO"] = 0;
+  result["PL"] = 0;
+  result["IT"] = 0;
+
+
+  for (auto pair : result) {
+    Graph g = Graph("data/real_data/large_twitch_features.csv", "data/real_data/large_twitch_edges.csv", pair.first);
+    
+    Algorithm algo;
+
+    result[pair.first] = algo.kosaraju_sharir(g);
+  }
 
   //Graph g = Graph("data/test_data/test_features.csv", "data/test_data/test_edges.csv", "EN");
-  Algorithm algo;
 
-  int largest_FI_community = algo.kosaraju_sharir(g);
 
   //g.print_adj_list();
 
-  std::cout << "largest FI community: " << largest_FI_community << std::endl;
+  for (auto pair : result) {
+    std::cout << "largest_" << pair.first << "_community: "  << pair.second << std::endl;
+  }
+
   return 0;
 }
