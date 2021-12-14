@@ -96,6 +96,11 @@ vector<int> Algorithm::dijkstra(Graph & g, Node start, Node end) {
         
     }
 
+    if(curr.src.get_numeric_id() != end.get_numeric_id()) {
+        std::cout << "Route not found" << std::endl;
+        return vector<int>();
+    }
+
     vector<int> out;
     while (curr.dest.get_numeric_id() != curr.src.get_numeric_id()) {
         out.push_back(curr.src.get_numeric_id());
