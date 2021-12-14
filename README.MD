@@ -15,7 +15,7 @@
     <a href="https://github-dev.cs.illinois.edu/cs225-fa21/snmehta2-athev2-dhanker2-farazms2/tree/master/md_files_and_misc_documents"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.youtube.com/">Link to final presentation (UPLOAD VIDEO)</a>
+    <a href="https://www.youtube.com/watch?v=kpTG84i-u50">Link to final presentation</a>
   </p>
 </div>
 
