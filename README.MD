@@ -7,7 +7,7 @@
     <img src="twitch.png" alt="Logo" width="300" height="300">
   </a>
 
-<h3 align="center">The Largest European Language Communities on Twitch</h3>
+<h3 align="center">The Largest European-Originated Language Communities on Twitch</h3>
 
   <p align="center">
     We want to determine <b>which major European language has the largest community on Twitch</b>. We define community as a connected component where each user has a direct OR non-direct follower relationship with every other user in the community. This data will show the biggest European community on Twitch, and will highlight how specific accounts have the potential to get more recognition solely based on their native language. 
@@ -26,7 +26,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#linkage-and-location">Location of code</a>
+      <a href="#Location-of-code">Location of code</a>
       <ul>
         <li><a>Major Code</a></li>
         <li><a>Data</a></li>
