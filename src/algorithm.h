@@ -74,7 +74,7 @@ class Algorithm {
      * 
      * @return <enter a description>
      **/
-    void dfs_from_start(Graph& g, int n, vector<bool>& visited, vector<int>& out);
+    void dfs_from_start(Graph& g, int n, unordered_map<int, bool>& visited, vector<int>& out);
 
     /**
      * <enter a description about what the fn does>
@@ -86,7 +86,7 @@ class Algorithm {
      * 
      * @return <enter a description>
      **/
-    void fill_stack_scc_order(Graph& g, int n, vector<bool>& visited, std::stack<int>& s);
+    void fill_stack_scc_order(Graph& g, int n, unordered_map<int, bool>& visited, std::stack<int>& s);
 
     std::map<int, Label> node_label;
 
