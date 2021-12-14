@@ -85,10 +85,13 @@ class Graph {
 
         unordered_map< int, Node > get_data_map();
 
-        unordered_map< int, unordered_map< int, Edge> > get_adj_list() const;
+        unordered_map< int, unordered_map< int, Graph::Edge> > get_adj_list();
 
 
     private:
+        // allows us to filter for older accounts
+        //const int MIN_LIFETIME = 2000;
+
         // Maps node_ids to Node objects.
         unordered_map< int, Node > data_map;
         
