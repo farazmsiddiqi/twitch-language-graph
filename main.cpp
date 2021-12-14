@@ -19,7 +19,6 @@ int main() {
   result["IT"] = 0;
   result["NO"] = 0;
   result["PL"] = 0;
-  result["IT"] = 0;
 
 
   for (auto pair : result) {
